@@ -19,14 +19,14 @@ function About() {
             />
           </div>
 
-          <div className="flex-1 px-6">
+          <div className="flex-1 px-2 sm:px-3 md:px-6">
             <p className="text-sm tracking-widest uppercase text-gray-500 text-center md:text-left">
               About Us
             </p>
             <h2 className="text-4xl font-bold mt-2 mb-6 text-center md:text-left bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
               Our Story
             </h2>
-            <div className="space-y-4 text-gray-700 leading-loose w-[90%] md:w-full mx-auto">
+            <div className="space-y-4 text-gray-700 leading-loose w-full mx-auto">
               <p>
                 <strong>Izubest Luxury LTD</strong> began in
                 <strong> 2016,</strong> inspired by a young
