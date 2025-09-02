@@ -13,9 +13,9 @@ function Location() {
     <Section>
       <div
         id="location"
-        className="w-full flex items-stretch justify-center "
+        className="w-full flex flex-col md:flex-row items-stretch justify-center "
       >
-        <div className="w-[30%] px-3 sm:px-10 py-10 space-y-2 bg-gray-100">
+        <div className="w-full md:w-[30%] px-3 sm:px-10 py-10 space-y-2 bg-gray-100 text-center md:text-left">
           <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
             We are open
           </p>

@@ -319,7 +319,7 @@ function Collections() {
                         alt="collection"
                         className="w-full h-[80%] object-cover rounded-t-lg "
                       />
-                      <p className="text-xs font-semibold py-2">
+                      <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
                         price : ${x.price}
                       </p>
                       <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
@@ -393,7 +393,7 @@ function Collections() {
                       alt="collection"
                       className="w-full h-[80%] object-cover rounded-t-lg "
                     />
-                    <p className="text-xs font-semibold py-2">
+                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
                       price : ${x.price}
                     </p>
                     <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
@@ -464,7 +464,7 @@ function Collections() {
                       alt="collection"
                       className="w-full h-[80%] object-cover rounded-t-lg "
                     />
-                    <p className="text-xs font-semibold py-2">
+                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
                       price : ${x.price}
                     </p>
                     <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
@@ -538,7 +538,7 @@ function Collections() {
                       alt="collection"
                       className="w-full h-[80%] object-cover rounded-t-lg "
                     />
-                    <p className="text-xs font-semibold py-2">
+                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
                       price : ${x.price}
                     </p>
                     <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
@@ -611,7 +611,7 @@ function Collections() {
                       alt="collection"
                       className="w-full h-[80%] object-cover rounded-t-lg "
                     />
-                    <p className="text-xs font-semibold py-2">
+                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
                       price : ${x.price}
                     </p>
                     <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">

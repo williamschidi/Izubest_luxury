@@ -8,7 +8,7 @@ function Hero() {
       style={{ backgroundImage: `url(${bg1})` }}
     >
       <div className="absolute bg-gradient-to-tr from-yellow-800/30 to-yellow-500/10 inset-0"></div>
-      <div className="w-full sm:w-[60%] h-full bg-yellow-700/50 xs:[clip-path:circle(80%_at_0%_50%)] ">
+      <div className="w-full sm:w-[60%] h-full bg-yellow-700/50 sm:[clip-path:circle(80%_at_0%_50%)] ">
         <div className="max-w-full sm:max-w-[28rem] pb-16 sm:pb-0 flex flex-col justify-end sm:justify-center items-center xs:items-start  h-full px-2 xs:px-4 sm:px-6 md:px-8 text-white">
           <h1 className="text-3xl  md:text-4xl  font-bold mb-4 text-white text-transparent font-poppins">
             Elevate Your Style
