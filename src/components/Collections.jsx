@@ -271,7 +271,7 @@ function Collections() {
         <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-6 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
           The Collection
         </h2>
-        <p className="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto mb-6 sm:px-0` px-6">
+        <p className="text-gray-700 text-md sm:text-lg leading-relaxed max-w-2xl mx-auto mb-6 sm:px-0` px-6">
           Browse our seasonal collections inspired by urban
           minimalism and natural textures. Each look is
           crafted to empower your style journey.

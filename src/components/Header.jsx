@@ -73,19 +73,19 @@ function Header({ data }) {
             onClick={() => setToggleMobileNav(false)}
           />
           <ul className="font-playfair w-full bg-gray-800">
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-white cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
               ABOUT
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-white cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
               COLLECTIONS
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-white cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
               LATEST
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-white cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
               TESTIMONY
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-white cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
               SHOP
             </li>
           </ul>
