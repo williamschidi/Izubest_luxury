@@ -316,7 +316,7 @@ function Header({ data }) {
           onClick={handleSubmit}
           className={`font-bold text-sm px-3 py-1 ${
             isActive
-              ? "bg-gradient-to-tr from-yellow-800 to-yellow-500 text-white"
+              ? "bg-gradient-to-r from-yellow-600 to-yellow-800 text-white"
               : ""
           }`}
         >
@@ -359,7 +359,7 @@ function Header({ data }) {
             onClick={handleSubmit}
             className={`font-bold text-sm px-3 py-1 ${
               isActive
-                ? "bg-gradient-to-tr from-yellow-800 to-yellow-500 text-white"
+                ? "bg-gradient-to-r from-yellow-600 to-yellow-800 text-white"
                 : ""
             }`}
           >

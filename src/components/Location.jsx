@@ -41,8 +41,9 @@ function Location() {
             {/* Marker */}
             <Marker position={[6.4808, 7.57778]}>
               <Popup>
-                Izubest Luxury LTD is here 🎉 <br /> Our
-                latest fashion designs.
+                <p style={{ fontSize: ".5rem" }}>
+                  Izubest Luxury LTD.
+                </p>
               </Popup>
             </Marker>
           </MapContainer>

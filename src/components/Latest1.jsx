@@ -16,11 +16,11 @@ function Latest1() {
         <div className="flex flex-col-reverse sm:flex-row justify-between items-start w-[90%] sm:max-w-[70rem] mx-auto gap-8  border border-gray-300">
           <video
             width=""
-            className="w-full sm:flex-1 bg-gray-200 h-[20rem]"
+            className="w-full sm:flex-[60%] bg-gray-200 h-[20rem]"
           >
             <source src="/video.mp4" type="video/mp4" />
           </video>
-          <div className="flex-1 flex flex-col justify-start gap-6 text-left  min-h-[20rem] py-4 px-4">
+          <div className="flex-[40%] flex flex-col justify-start gap-6 text-left  min-h-[20rem] py-4 px-4">
             <h2 className="font-bold text-2xl text-gray-600 tracking-tight">
               Classic Tencel
             </h2>
