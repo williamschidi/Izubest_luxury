@@ -314,10 +314,8 @@ function Header({ data }) {
         />
         <button
           onClick={handleSubmit}
-          className={`font-bold text-sm px-3 py-1 ${
-            isActive
-              ? "bg-gradient-to-r from-yellow-600 to-yellow-800 text-white"
-              : ""
+          className={`font-bold text-sm px-3 py-1 bg-gradient-to-r from-yellow-600 to-yellow-800 text-white ${
+            isActive ? "" : ""
           }`}
         >
           SEARCH
