@@ -2,8 +2,6 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Collection from "../components/Collection";
-// import Latest from "../components/Latest";
 import Collections from "../components/Collections";
 import Latest1 from "../components/Latest1";
 import Testimonial from "../components/Testimonial";
