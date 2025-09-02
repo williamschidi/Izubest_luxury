@@ -48,7 +48,7 @@ function Header({ data }) {
       } w-full`}
     >
       <div
-        className={`fixed w-full sm:w-[60%] bg-gray-700 transition-all duration-500 top-0 bottom-0 ${
+        className={`fixed w-full sm:w-[60%] bg-gray-700 transition-all duration-500 top-0 bottom-0 z-50 ${
           toggleMobileNav
             ? "right-0 sm:right-[40%] mlg:right-[100%]"
             : "right-[100%]  "
@@ -61,7 +61,7 @@ function Header({ data }) {
               alt="logo"
               className="w-[2rem] h-[2rem] xs:w-[2.4rem] xs:h-[2.4rem]"
             />
-            <span className="text-2xl xs:text-3xl tracking-tighter font-playfair font-semibold bg-gradient-to-r from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+            <span className="text-xl xs:text-3xl tracking-tighter font-playfair font-semibold bg-gradient-to-r from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
               Izubest Luxury
             </span>
           </h2>
@@ -196,7 +196,7 @@ function Header({ data }) {
           </NavLink>
         </div>
       </div>
-      <div className="px-6 flex justify-between items-center border-t border-b border-yellow-600 h-[5rem]">
+      <div className=" px-3 xs:px-6 flex justify-between items-center border-t border-b border-yellow-600 h-[5rem]">
         <Icon
           icon="solar:hamburger-menu-outline"
           width="24"
@@ -266,7 +266,7 @@ function Header({ data }) {
           </li>
         </ul>
 
-        <div className="inline-flex justify-between items-center gap-4">
+        <div className="inline-flex justify-between items-center gap-3 xs:gap-4">
           <div className="flex justify-between items-center gap-1 cursor-pointer">
             <Icon
               icon="tdesign:cart-filled"

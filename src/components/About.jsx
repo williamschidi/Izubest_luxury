@@ -19,7 +19,7 @@ function About() {
             />
           </div>
 
-          <div className="flex-1 px-2 sm:px-3 md:px-6">
+          <div className="flex-1 px-1 sm:px-3 md:px-6">
             <p className="text-sm tracking-widest uppercase text-gray-500 text-center md:text-left">
               About Us
             </p>

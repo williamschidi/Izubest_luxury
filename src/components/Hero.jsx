@@ -1,7 +1,4 @@
-// import bg1 from "./../assets/hero-img6.webp";
-// import bg1 from "./../assets/hero-img5.webp";
 import bg1 from "./../assets/hero-img7.webp";
-// import bg1 from "./../assets/hero-img1.webp";
 
 function Hero() {
   return (
