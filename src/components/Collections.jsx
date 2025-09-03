@@ -333,7 +333,7 @@ function Collections() {
 
           <div
             ref={prevRef}
-            className=" absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
+            className="hidden sm:block absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
           >
             <Icon
               icon="mdi:arrow-left-bold"
@@ -343,7 +343,7 @@ function Collections() {
           </div>
           <div
             ref={nextRef}
-            className="absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
+            className="hidden sm:block absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
           >
             <Icon
               icon="mdi:arrow-right-bold"
@@ -406,7 +406,7 @@ function Collections() {
 
           <div
             ref={corperatePrevRef}
-            className=" absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
+            className="hidden sm:block absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
           >
             <Icon
               icon="mdi:arrow-left-bold"
@@ -416,7 +416,7 @@ function Collections() {
           </div>
           <div
             ref={corperateNextRef}
-            className="absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
+            className="hidden sm:block absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
           >
             <Icon
               icon="mdi:arrow-right-bold"
@@ -477,7 +477,7 @@ function Collections() {
 
           <div
             ref={casualPrevRef}
-            className=" absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
+            className="hidden sm:block absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
           >
             <Icon
               icon="mdi:arrow-left-bold"
@@ -487,7 +487,7 @@ function Collections() {
           </div>
           <div
             ref={casualNextRef}
-            className="absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
+            className="hidden sm:block absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
           >
             <Icon
               icon="mdi:arrow-right-bold"
@@ -551,7 +551,7 @@ function Collections() {
 
           <div
             ref={footWearPrevRef}
-            className=" absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
+            className="hidden sm:block absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
           >
             <Icon
               icon="mdi:arrow-left-bold"
@@ -561,7 +561,7 @@ function Collections() {
           </div>
           <div
             ref={footWearNextRef}
-            className="absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
+            className="hidden sm:block absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
           >
             <Icon
               icon="mdi:arrow-right-bold"
@@ -624,7 +624,7 @@ function Collections() {
 
           <div
             ref={jeweriesPrevRef}
-            className=" absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
+            className="hidden sm:block absolute top-1/2 left-6 translate-y-1/2 z-10 swiper-button-prev text-gray-100 bg-gray-300 rounded-full w-8 h-8 "
           >
             <Icon
               icon="mdi:arrow-left-bold"
@@ -634,7 +634,7 @@ function Collections() {
           </div>
           <div
             ref={jeweriesNextRef}
-            className="absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
+            className="hidden sm:block absolute top-1/2 right-6 translate-y-1/2 z-10  swiper-button-next  bg-gray-300 text-gray-100 rounded-full w-8 h-8"
           >
             <Icon
               icon="mdi:arrow-right-bold"
