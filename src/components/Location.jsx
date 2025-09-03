@@ -8,6 +8,17 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
+
 function Location() {
   return (
     <Section>
@@ -41,9 +52,9 @@ function Location() {
             {/* Marker */}
             <Marker position={[6.4808, 7.57778]}>
               <Popup>
-                <p style={{ fontSize: ".5rem" }}>
-                  Izubest Luxury LTD.
-                </p>
+                {/* <p style={{ fontSize: ".5rem" }}> */}
+                Izubest Luxury LTD.
+                {/* </p> */}
               </Popup>
             </Marker>
           </MapContainer>
