@@ -61,12 +61,12 @@ function ViewProduct() {
           </NavLink>
         </nav>
 
-        <div className=" w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-md">
-          <div className="w-full flex justify-center items-center bg-gray-200 rounded-l-md">
+        <div className=" sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-md">
+          <div className="w-full flex justify-center items-center bg-gray-200 rounded-l-md ">
             <img
               src="/wear-img/img2.jpg"
               alt="product-image"
-              className=" w-[90%] mlg:w-[60%] max-h-[35rem] "
+              className=" w-[100%] mlg:w-[60%] h-[30rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none"
             />
           </div>
           <div className=" w-full px-8 py-3">
@@ -90,8 +90,8 @@ function ViewProduct() {
               for those who want fashion that cares for both
               you and the planet.
             </p>
-            <div className="w-full pt-4 flex justify-between items-center gap-4">
-              <div className="w-[40%] space-y-2">
+            <div className="w-full pt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div className="w-[80%] sm:w-[40%] space-y-2">
                 <span className="text-sm font-bold text-gray-600">
                   Select Color :
                 </span>
@@ -130,12 +130,12 @@ function ViewProduct() {
                 </select>
               </div>
 
-              <div className="w-[50%] space-y-2">
+              <div className="w-[80%] space-y-2">
                 <span className="text-gray-600 text-sm font-bold">
                   QTY :
                 </span>
 
-                <div className="flex justify-between items-center w-[80%] bg-white  rounded-md">
+                <div className="flex justify-between items-center w-full sm:w-[80%] bg-white  rounded-md">
                   <button
                     className="text-gray-700 px-3 py-2"
                     onClick={handleDec}
