@@ -6,6 +6,7 @@ import {
   Marker,
   Popup,
 } from "react-leaflet";
+
 import "leaflet/dist/leaflet.css";
 
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
@@ -36,7 +37,7 @@ function Location() {
           </h2>
         </div>
 
-        <div className="w-full h-[300px]">
+        <div className="w-full h-[25rem]">
           <MapContainer
             center={[6.4808, 7.57778]} // Lagos coordinates
             zoom={13}

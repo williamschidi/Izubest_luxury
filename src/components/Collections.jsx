@@ -5,6 +5,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Section from "./Section";
+import { NavLink } from "react-router-dom";
 
 // import Section from "./Section";
 
@@ -310,22 +311,35 @@ function Collections() {
                 )
                 .map((x, i) => (
                   <SwiperSlide key={i}>
-                    <div
-                      id={x.id}
-                      className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
-                    >
-                      <img
-                        src={x.img}
-                        alt="collection"
-                        className="w-full h-[80%] object-cover rounded-t-lg "
-                      />
-                      <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
-                        price : ${x.price}
-                      </p>
-                      <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
-                        ADD TO CART
-                      </p>
-                    </div>
+                    <NavLink to={`/product/${x.id}`}>
+                      <div
+                        id={x.id}
+                        className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      >
+                        <img
+                          src={x.img}
+                          alt="collection"
+                          className="w-full h-[80%] object-cover rounded-t-lg "
+                          loading="lazy"
+                        />
+                        <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                          <span className="">
+                            {x.name.replace(
+                              x.name[0],
+                              x.name[0].toUpperCase()
+                            )}
+                          </span>
+                          <span className="text-xs">
+                            ${x.price}
+                          </span>
+                        </p>
+                        <div className="h-[14%]">
+                          <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50  visible bg-gradient-to-r from-yellow-500 to-yellow-800  rounded-b-lg">
+                            VIEW DETAILS ....
+                          </button>
+                        </div>
+                      </div>
+                    </NavLink>
                   </SwiperSlide>
                 ))}
             </Swiper>
@@ -384,22 +398,35 @@ function Collections() {
               )
               .map((x, i) => (
                 <SwiperSlide key={i}>
-                  <div
-                    id={x.id}
-                    className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
-                  >
-                    <img
-                      src={x.img}
-                      alt="collection"
-                      className="w-full h-[80%] object-cover rounded-t-lg "
-                    />
-                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
-                      price : ${x.price}
-                    </p>
-                    <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
-                      ADD TO CART
-                    </p>
-                  </div>
+                  <NavLink to={`/product/${x.id}`}>
+                    <div
+                      id={x.id}
+                      className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                    >
+                      <img
+                        src={x.img}
+                        alt="collection"
+                        loading="lazy"
+                        className="w-full h-[80%] object-cover rounded-t-lg "
+                      />
+                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                        <span className="">
+                          {x.name.replace(
+                            x.name[0],
+                            x.name[0].toUpperCase()
+                          )}
+                        </span>
+                        <span className="text-xs">
+                          ${x.price}
+                        </span>
+                      </p>
+                      <div className="h-[14%]">
+                        <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50  bg-gradient-to-r from-yellow-500 to-yellow-800  rounded-b-lg">
+                          VIEW DETAILS ....
+                        </button>
+                      </div>
+                    </div>
+                  </NavLink>
                 </SwiperSlide>
               ))}
           </Swiper>
@@ -455,22 +482,35 @@ function Collections() {
               .filter((item) => item.category === "casual")
               .map((x, i) => (
                 <SwiperSlide key={i}>
-                  <div
-                    id={x.id}
-                    className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
-                  >
-                    <img
-                      src={x.img}
-                      alt="collection"
-                      className="w-full h-[80%] object-cover rounded-t-lg "
-                    />
-                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
-                      price : ${x.price}
-                    </p>
-                    <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
-                      ADD TO CART
-                    </p>
-                  </div>
+                  <NavLink to={`/product/${x.id}`}>
+                    <div
+                      id={x.id}
+                      className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                    >
+                      <img
+                        src={x.img}
+                        alt="collection"
+                        loading="lazy"
+                        className="w-full h-[80%] object-cover rounded-t-lg "
+                      />
+                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                        <span className="">
+                          {x.name.replace(
+                            x.name[0],
+                            x.name[0].toUpperCase()
+                          )}
+                        </span>
+                        <span className="text-xs">
+                          ${x.price}
+                        </span>
+                      </p>
+                      <div className="h-[14%]">
+                        <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
+                          VIEW DETAILS ....
+                        </button>
+                      </div>
+                    </div>
+                  </NavLink>
                 </SwiperSlide>
               ))}
           </Swiper>
@@ -529,22 +569,35 @@ function Collections() {
               )
               .map((x, i) => (
                 <SwiperSlide key={i}>
-                  <div
-                    id={x.id}
-                    className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
-                  >
-                    <img
-                      src={x.img}
-                      alt="collection"
-                      className="w-full h-[80%] object-cover rounded-t-lg "
-                    />
-                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
-                      price : ${x.price}
-                    </p>
-                    <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
-                      ADD TO CART
-                    </p>
-                  </div>
+                  <NavLink to={`/product/${x.id}`}>
+                    <div
+                      id={x.id}
+                      className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                    >
+                      <img
+                        src={x.img}
+                        alt="collection"
+                        loading="lazy"
+                        className="w-full h-[80%] object-cover rounded-t-lg "
+                      />
+                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                        <span className="">
+                          {x.name.replace(
+                            x.name[0],
+                            x.name[0].toUpperCase()
+                          )}
+                        </span>
+                        <span className="text-xs">
+                          ${x.price}
+                        </span>
+                      </p>
+                      <div className="h-[14%]">
+                        <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
+                          VIEW DETAILS ....
+                        </button>
+                      </div>
+                    </div>
+                  </NavLink>
                 </SwiperSlide>
               ))}
           </Swiper>
@@ -602,22 +655,35 @@ function Collections() {
               )
               .map((x, i) => (
                 <SwiperSlide key={i}>
-                  <div
-                    id={x.id}
-                    className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
-                  >
-                    <img
-                      src={x.img}
-                      alt="collection"
-                      className="w-full h-[80%] object-cover rounded-t-lg "
-                    />
-                    <p className="text-xs font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
-                      price : ${x.price}
-                    </p>
-                    <p className="pt-2 border-t border-gray-200 text-[0.6rem] font-semibold text-gray-500 invisible group-hover:visible">
-                      ADD TO CART
-                    </p>
-                  </div>
+                  <NavLink to={`/product/${x.id}`}>
+                    <div
+                      id={x.id}
+                      className=" active:scale-95 group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                    >
+                      <img
+                        src={x.img}
+                        alt="collection"
+                        loading="lazy"
+                        className="w-full h-[80%] object-cover rounded-t-lg "
+                      />
+                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                        <span className="">
+                          {x.name.replace(
+                            x.name[0],
+                            x.name[0].toUpperCase()
+                          )}
+                        </span>
+                        <span className="text-xs">
+                          ${x.price}
+                        </span>
+                      </p>
+                      <div className="h-[14%]">
+                        <button className=" h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
+                          VIEW DETAILS ....
+                        </button>
+                      </div>
+                    </div>
+                  </NavLink>
                 </SwiperSlide>
               ))}
           </Swiper>

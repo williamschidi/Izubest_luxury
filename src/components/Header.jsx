@@ -1,5 +1,9 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { NavLink } from "react-router-dom";
+import {
+  NavLink,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "./../assets/logo1.jpg";
 import { useEffect, useRef, useState } from "react";
@@ -9,6 +13,8 @@ function Header({ data }) {
   const [isActive, setIsActive] = useState(false);
   const [toggleMobileNav, setToggleMobileNav] =
     useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const {
     collections,
@@ -22,14 +28,28 @@ function Header({ data }) {
   }
 
   function handleSubmit() {
-    console.log(collections);
     setCollections("");
+  }
+  function handleNavigation(tab) {
+    if (location.pathname !== "/") {
+      navigate("/");
+      document
+        .getElementById(tab)
+        .scrollIntoView({ behavior: smooth });
+    } else {
+      document
+        .getElementById(tab)
+        .scrollIntoView({ behavior: smooth });
+    }
   }
 
   useEffect(() => {
+    if (location.pathname !== "/") return;
+
     const handleScroll = () => {
       const heroHeight =
         document.getElementById("hero").offsetHeight;
+      if (!heroHeight || navRef.current) return;
       const navHeight = navRef.current.offsetHeight;
       setIsSticky(window.scrollY > heroHeight - navHeight);
     };
@@ -169,7 +189,11 @@ function Header({ data }) {
           Shop over #200,000 and enjoy FREE delivery!
         </p>
         <div className="inline-flex justify-start items-center gap-6 h-full">
-          <HashLink className="inline-flex justify-center items-center gap-1 hover:bg-yellow-950 h-full w-[6rem]">
+          <HashLink
+            smooth
+            to="#location"
+            className="inline-flex justify-center items-center gap-1 hover:bg-yellow-950 h-full w-[6rem]"
+          >
             <Icon
               icon="basil:location-outline"
               width="24"
@@ -204,7 +228,12 @@ function Header({ data }) {
           className="mlg:hidden"
           onClick={() => setToggleMobileNav(true)}
         />
-        <div className="inline-flex justify-start items-center gap-2">
+        <div
+          className="inline-flex justify-start items-center gap-2 cursor-pointer"
+          onClick={() =>
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }
+        >
           <img
             src={logo}
             alt="logo"
@@ -239,27 +268,48 @@ function Header({ data }) {
           </button>
         </div>
         <ul className="hidden mlg:flex justify-between items-center gap-2 lg:gap-4 font-playfair">
-          <li className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold">
+          <li
+            onClick={(about) => handleNavigation(about)}
+            className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold"
+          >
             <HashLink smooth to="#about">
               About
             </HashLink>
           </li>
-          <li className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold">
+          <li
+            onClick={(collection) =>
+              handleNavigation(collection)
+            }
+            className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold"
+          >
             <HashLink smooth to="#collections">
               Collections
             </HashLink>
           </li>
-          <li className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold">
+          <li
+            onClick={(latest) => handleNavigation(latest)}
+            className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold"
+          >
             <HashLink smooth to="#latest">
               Latest
             </HashLink>
           </li>
-          <li className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold">
+          <li
+            onClick={(testimony) =>
+              handleNavigation(testimony)
+            }
+            className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold"
+          >
             <HashLink smooth to="#testimony">
               Testimony
             </HashLink>
           </li>
-          <li className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold">
+          <li
+            onClick={(location) =>
+              handleNavigation(location)
+            }
+            className="bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent text-md px-2 lg:px-4 pb-2 cursor-pointer border-b-2 border-transparent hover:border-yellow-600 font-semibold"
+          >
             <HashLink smooth to="#location">
               Shop
             </HashLink>
@@ -321,7 +371,14 @@ function Header({ data }) {
           SEARCH
         </button>
       </div>
-      <div className="hidden h-[2rem] mlg:flex justify-center items-center gap-6 lg:gap-10 bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent px-6">
+      <div
+        id="categories"
+        className={`${
+          location.pathname === "/"
+            ? "hidden mlg:flex"
+            : "hidden"
+        }  h-[2rem]  justify-center items-center gap-6 lg:gap-10 bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent px-6 `}
+      >
         <div className=" inline-flex justify-end items-center text-xs font-bold  h-full">
           <button className="w-[7rem] lg:w-[8rem] border-l border-r border-yellow-600 h-full hover:bg-gradient-to-tr from-yellow-600 to-yellow-900 hover:text-white border-b">
             NATIVE WEARS

@@ -1,13 +1,16 @@
-import { useState } from "react";
-import Header from "../components/Header";
+import { lazy, Suspense, useState } from "react";
+
+// import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Collections from "../components/Collections";
 import Latest1 from "../components/Latest1";
 import Testimonial from "../components/Testimonial";
-import Location from "../components/Location";
 import Footer from "../components/Footer";
 
+const Location = lazy(() =>
+  import("../components/Location")
+);
 function Index() {
   const [collections, setCollections] = useState("");
   const [isSticky, setIsSticky] = useState(false);
@@ -19,13 +22,21 @@ function Index() {
   };
   return (
     <div className="">
-      <Header data={data} />
+      {/* <Header data={data} /> */}
       <Hero />
       <About />
       <Collections />
       <Latest1 />
       <Testimonial />
-      <Location />
+      <Suspense
+        fallback={
+          <div>
+            Loading Store Location along with Map .....
+          </div>
+        }
+      >
+        <Location />
+      </Suspense>
       <Footer />
     </div>
   );

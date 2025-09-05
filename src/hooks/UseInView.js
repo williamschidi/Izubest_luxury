@@ -18,7 +18,9 @@ function UseInView(threshold = 0.1) {
       observer.observe(ref.current);
     }
     return () => {
-      observer.unobserve(ref.current);
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
   }, []);
   return [isVisible, ref];
