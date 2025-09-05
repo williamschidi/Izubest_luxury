@@ -17,14 +17,14 @@ function ViewProduct() {
     if (data.qty === 1) return;
     setData((prev) => ({
       ...prev,
-      qty: prev.qty--,
+      qty: prev.qty - 1,
     }));
   }
 
   function handleInc() {
     setData((prev) => ({
       ...prev,
-      qty: prev.qty++,
+      qty: prev.qty + 1,
     }));
   }
 
@@ -61,15 +61,15 @@ function ViewProduct() {
           </NavLink>
         </nav>
 
-        <div className=" sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-md">
-          <div className="w-full flex justify-center items-center bg-gray-200 rounded-l-md ">
+        <div className=" sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-md px-4 sm:px-0">
+          <div className="w-full flex justify-center items-center bg-gray-200 rounded-l-md">
             <img
               src="/wear-img/img2.jpg"
               alt="product-image"
               className=" w-[100%] mlg:w-[60%] h-[30rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none"
             />
           </div>
-          <div className=" w-full px-8 py-3">
+          <div className=" w-full px-2 sm:px-8 py-3">
             <div className="flex justify-between items-center font-playfair w-[90%] xs:w-[80%] sm:w-[70%] mx-auto">
               <h2 className="font-bold text-xl sm:text-2xl bg-gradient-to-r from-yellow-700 to-yellow-900 text-transparent bg-clip-text tracking-tight">
                 Classic Tencel
