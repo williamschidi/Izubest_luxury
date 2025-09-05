@@ -263,7 +263,7 @@ function Collections() {
     <Section>
       <section
         id="collections"
-        className="text-center pt-[4rem] pb-2"
+        className="text-center pt-[4rem] pb-[2rem]"
       >
         <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
           The Collection
@@ -280,7 +280,7 @@ function Collections() {
 
         <div
           id="native-wears "
-          className="relative max-w-[70rem] h-[25rem] mx-auto py-4   "
+          className="relative max-w-[70rem] h-[26rem] sm:h-[22rem] mx-auto py-2"
         >
           {swiperReady && (
             <Swiper
@@ -299,11 +299,12 @@ function Collections() {
               }}
               // autoplay={{ delay: 5000 }}
               breakpoints={{
-                0: { slidesPerView: 2 },
+                0: { slidesPerView: 1 },
+                450: { slidesPerView: 2 },
                 640: { slidesPerView: 3 },
                 1024: { slidesPerView: 4 },
               }}
-              className=" px-4 py-4 w-full "
+              className=" px-4 py-2 w-full "
             >
               {collectionDetails
                 .filter(
@@ -314,15 +315,15 @@ function Collections() {
                     <NavLink to={`/product/${x.id}`}>
                       <div
                         id={x.id}
-                        className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                        className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                       >
                         <img
                           src={x.img}
                           alt="collection"
-                          className="w-full h-[80%] object-cover rounded-t-lg "
+                          className="w-full h-[90%] object-cover rounded-t-lg "
                           loading="lazy"
                         />
-                        <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                        <p className=" h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                           <span className="">
                             {x.name.replace(
                               x.name[0],
@@ -333,8 +334,8 @@ function Collections() {
                             ${x.price}
                           </span>
                         </p>
-                        <div className="h-[14%]">
-                          <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50  visible bg-gradient-to-r from-yellow-500 to-yellow-800  rounded-b-lg">
+                        <div className="h-[10%] rounded-b-lg">
+                          <button className="h-full w-full py-2 border-t border-gray-200 text-xs font-bold text-gray-50  visible bg-gradient-to-r from-yellow-500 to-yellow-800  rounded-b-lg">
                             VIEW DETAILS ....
                           </button>
                         </div>
@@ -368,7 +369,7 @@ function Collections() {
         </div>
         <div
           id="corperate-wears"
-          className="relative max-w-[70rem] h-[25rem] mx-auto py-2   "
+          className="relative max-w-[70rem] h-[26rem] sm:h-[22rem] mx-auto py-2   "
         >
           <Swiper
             modules={[Navigation, Autoplay]}
@@ -386,7 +387,8 @@ function Collections() {
             }}
             // autoplay={{ delay: 4000 }}
             breakpoints={{
-              0: { slidesPerView: 2 },
+              0: { slidesPerView: 1 },
+              450: { slidesPerView: 2 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -401,15 +403,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[80%] object-cover rounded-t-lg "
+                        className="w-full h-[90%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -420,8 +422,8 @@ function Collections() {
                           ${x.price}
                         </span>
                       </p>
-                      <div className="h-[14%]">
-                        <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50  bg-gradient-to-r from-yellow-500 to-yellow-800  rounded-b-lg">
+                      <div className="h-[10%]">
+                        <button className="h-full w-full py-2 border-t border-gray-200 text-xs font-bold text-gray-50  bg-gradient-to-r from-yellow-500 to-yellow-800  rounded-b-lg">
                           VIEW DETAILS ....
                         </button>
                       </div>
@@ -454,7 +456,7 @@ function Collections() {
         </div>
         <div
           id="casual-wears"
-          className="relative max-w-[70rem] h-[25rem] mx-auto py-2"
+          className="relative max-w-[70rem] h-[26rem] sm:h-[22rem] mx-auto py-2"
         >
           <Swiper
             modules={[Navigation, Autoplay]}
@@ -472,7 +474,8 @@ function Collections() {
             }}
             // autoplay={{ delay: 4000 }}
             breakpoints={{
-              0: { slidesPerView: 2 },
+              0: { slidesPerView: 1 },
+              450: { slidesPerView: 2 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -485,15 +488,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[80%] object-cover rounded-t-lg "
+                        className="w-full h-[90%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -504,8 +507,8 @@ function Collections() {
                           ${x.price}
                         </span>
                       </p>
-                      <div className="h-[14%]">
-                        <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
+                      <div className="h-[10%]">
+                        <button className="h-full w-full py-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
                           VIEW DETAILS ....
                         </button>
                       </div>
@@ -539,7 +542,7 @@ function Collections() {
 
         <div
           id="foot-wears"
-          className="relative max-w-[70rem] h-[25rem] mx-auto py-2   "
+          className="relative max-w-[70rem] h-[26rem] sm:h-[22rem] mx-auto py-2   "
         >
           <Swiper
             modules={[Navigation, Autoplay]}
@@ -557,7 +560,8 @@ function Collections() {
             }}
             // autoplay={{ delay: 4000 }}
             breakpoints={{
-              0: { slidesPerView: 2 },
+              0: { slidesPerView: 1 },
+              450: { slidesPerView: 2 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -572,15 +576,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className="group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[80%] object-cover rounded-t-lg "
+                        className="w-full h-[90%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -591,8 +595,8 @@ function Collections() {
                           ${x.price}
                         </span>
                       </p>
-                      <div className="h-[14%]">
-                        <button className="h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
+                      <div className="h-[10%]">
+                        <button className="h-full w-full py-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
                           VIEW DETAILS ....
                         </button>
                       </div>
@@ -625,7 +629,7 @@ function Collections() {
         </div>
         <div
           id="foot-wears"
-          className="relative max-w-[70rem] h-[25rem] mx-auto py-2"
+          className="relative max-w-[70rem] h-[26rem] sm:h-[22rem] mx-auto py-2"
         >
           <Swiper
             modules={[Navigation, Autoplay]}
@@ -643,7 +647,8 @@ function Collections() {
             }}
             // autoplay={false}
             breakpoints={{
-              0: { slidesPerView: 2 },
+              0: { slidesPerView: 1 },
+              450: { slidesPerView: 2 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -658,15 +663,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className=" active:scale-95 group w-full h-[20rem] cursor-pointer hover:scale-105 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[80%] object-cover rounded-t-lg "
+                        className="w-full h-[90%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[11%] flex justify-center items-center gap-4 text-sm font-bold py-2 bg-gradient-to-tr from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -677,8 +682,8 @@ function Collections() {
                           ${x.price}
                         </span>
                       </p>
-                      <div className="h-[14%]">
-                        <button className=" h-full w-full pt-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
+                      <div className="h-[10%]">
+                        <button className="h-full w-full py-2 border-t border-gray-200 text-xs font-bold text-gray-50 bg-gradient-to-r from-yellow-400 to-yellow-800  rounded-b-lg">
                           VIEW DETAILS ....
                         </button>
                       </div>

@@ -7,7 +7,7 @@ function Latest1() {
     <Section>
       <section
         id="latest"
-        className="text-center pt-[2.4rem] bg-gray-100  px-2 pb-16"
+        className="text-center pt-[4rem] bg-gray-100  px-2 pb-16"
       >
         <p className="text-sm uppercase tracking-[0.2em] text-gray-800">
           LATEST

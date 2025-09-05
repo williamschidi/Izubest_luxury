@@ -71,14 +71,14 @@ function ViewProduct() {
           </div>
           <div className=" w-full px-2 sm:px-8 py-3">
             <div className="flex justify-between items-center font-playfair w-[90%] xs:w-[80%] sm:w-[70%] mx-auto">
-              <h2 className="font-bold text-xl sm:text-2xl bg-gradient-to-r from-yellow-700 to-yellow-900 text-transparent bg-clip-text tracking-tight">
+              <h2 className="font-bold text-xl sm:text-2xl text-gray-600 tracking-tight">
                 Classic Tencel
               </h2>
-              <p className="font-bold bg-gradient-to-r from-yellow-700 to-yellow-900 text-transparent bg-clip-text text-xl sm:text-2xl">
+              <p className="font-bold text-gray-600 tracking-tight text-xl sm:text-2xl">
                 $150
               </p>
             </div>
-            <p className="pt-[1rem] tracking-wide text-gray-700">
+            <p className="pt-[1rem] text-sm tracking-wide text-gray-700">
               Tencel is the fabric that feels like luxury
               and breathes like nature. Made from
               sustainably sourced wood pulp, it's silky
@@ -90,14 +90,14 @@ function ViewProduct() {
               for those who want fashion that cares for both
               you and the planet.
             </p>
-            <div className="w-full pt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <div className="w-[80%] sm:w-[40%] space-y-2">
+            <div className="w-full pt-4 flex justify-between items-center gap-4">
+              <div className="w-[40%] space-y-2">
                 <span className="text-sm font-bold text-gray-600">
                   Select Color :
                 </span>
                 <select
                   style={{ backgroundColor: data.color }}
-                  className={`w-full py-2 px-2 rounded-md focus:outline-none text-sm font-semibold text-gray-600 `}
+                  className={`w-full py-4 px-2 rounded-md focus:outline-none text-sm font-semibold bg-white text-gray-600 `}
                   onChange={handleChange}
                   name="color"
                   value={data.color}
@@ -130,14 +130,14 @@ function ViewProduct() {
                 </select>
               </div>
 
-              <div className="w-[80%] space-y-2">
+              <div className="w-[60%] space-y-2">
                 <span className="text-gray-600 text-sm font-bold">
                   QTY :
                 </span>
 
                 <div className="flex justify-between items-center w-full sm:w-[80%] bg-white  rounded-md">
                   <button
-                    className="text-gray-700 px-3 py-2"
+                    className="text-gray-700 px-3 py-4"
                     onClick={handleDec}
                   >
                     <Icon
@@ -154,7 +154,7 @@ function ViewProduct() {
                     {data.qty}
                   </span>
                   <button
-                    className="text-gray-700 px-3 py-2"
+                    className="text-gray-700 px-3 py-4"
                     onClick={handleInc}
                   >
                     <Icon
