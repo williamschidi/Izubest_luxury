@@ -127,7 +127,7 @@ const collectionDetails = [
     name: "senator5",
     category: "native",
     price: 140,
-    img: "wear-img/img5.jpg",
+    img: "wear-img/img5.webp",
   },
   {
     id: "18",
@@ -291,7 +291,7 @@ function Collections() {
                 swiper.params.navigation.nextEl =
                   nextRef.current;
               }}
-              spaceBetween={10}
+              spaceBetween={20}
               loop={true}
               navigation={{
                 prevEl: prevRef.current,
@@ -300,7 +300,7 @@ function Collections() {
               // autoplay={{ delay: 5000 }}
               breakpoints={{
                 0: { slidesPerView: 1 },
-                450: { slidesPerView: 2 },
+                450: { slidesPerView: 2, spaceBetween: 10 },
                 640: { slidesPerView: 3 },
                 1024: { slidesPerView: 4 },
               }}
@@ -315,15 +315,15 @@ function Collections() {
                     <NavLink to={`/product/${x.id}`}>
                       <div
                         id={x.id}
-                        className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                        className="h-[25rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-lg rounded-lg pb-4 "
                       >
                         <img
                           src={x.img}
                           alt="collection"
-                          className="w-full h-[90%] object-cover rounded-t-lg "
+                          className="w-full h-[88%] object-cover rounded-t-lg "
                           loading="lazy"
                         />
-                        <p className=" h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                        <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                           <span className="">
                             {x.name.replace(
                               x.name[0],
@@ -379,7 +379,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 corperateNextRef.current;
             }}
-            spaceBetween={10}
+            spaceBetween={20}
             loop={true}
             navigation={{
               prevEl: corperatePrevRef.current,
@@ -388,7 +388,7 @@ function Collections() {
             // autoplay={{ delay: 4000 }}
             breakpoints={{
               0: { slidesPerView: 1 },
-              450: { slidesPerView: 2 },
+              450: { slidesPerView: 2, spaceBetween: 10 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -403,15 +403,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[25rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[90%] object-cover rounded-t-lg "
+                        className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -466,7 +466,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 casualNextRef.current;
             }}
-            spaceBetween={10}
+            spaceBetween={20}
             loop={true}
             navigation={{
               prevEl: casualPrevRef.current,
@@ -475,7 +475,7 @@ function Collections() {
             // autoplay={{ delay: 4000 }}
             breakpoints={{
               0: { slidesPerView: 1 },
-              450: { slidesPerView: 2 },
+              450: { slidesPerView: 2, spaceBetween: 10 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -488,15 +488,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[25rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[90%] object-cover rounded-t-lg "
+                        className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -552,7 +552,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 footWearNextRef.current;
             }}
-            spaceBetween={10}
+            spaceBetween={20}
             loop={true}
             navigation={{
               prevEl: footWearPrevRef.current,
@@ -561,7 +561,7 @@ function Collections() {
             // autoplay={{ delay: 4000 }}
             breakpoints={{
               0: { slidesPerView: 1 },
-              450: { slidesPerView: 2 },
+              450: { slidesPerView: 2, spaceBetween: 10 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -576,15 +576,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[25rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[90%] object-cover rounded-t-lg "
+                        className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -639,7 +639,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 jeweriesNextRef.current;
             }}
-            spaceBetween={10}
+            spaceBetween={20}
             loop={true}
             navigation={{
               prevEl: jeweriesPrevRef.current,
@@ -648,7 +648,7 @@ function Collections() {
             // autoplay={false}
             breakpoints={{
               0: { slidesPerView: 1 },
-              450: { slidesPerView: 2 },
+              450: { slidesPerView: 2, spaceBetween: 10 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 4 },
             }}
@@ -663,15 +663,15 @@ function Collections() {
                   <NavLink to={`/product/${x.id}`}>
                     <div
                       id={x.id}
-                      className="h-[24rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
+                      className="h-[25rem] sm:h-[21rem] cursor-pointer hover:scale-95 transition-transform duration-300 shadow-xl rounded-lg pb-4"
                     >
                       <img
                         src={x.img}
                         alt="collection"
                         loading="lazy"
-                        className="w-full h-[90%] object-cover rounded-t-lg "
+                        className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
