@@ -108,13 +108,7 @@ const collectionDetails = [
     price: 140,
     img: "wear-img/suite4.webp",
   },
-  {
-    id: "15",
-    name: "suite",
-    category: "corperate",
-    price: 140,
-    img: "wear-img/suite5.webp",
-  },
+
   {
     id: "16",
     name: "plain1",

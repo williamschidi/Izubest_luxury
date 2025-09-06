@@ -220,7 +220,7 @@ function Header({ data }) {
           </NavLink>
         </div>
       </div>
-      <div className=" px-3 xs:px-6 flex justify-between items-center border-t border-b border-yellow-600 h-[5rem]">
+      <div className=" px-3 xs:px-6 flex justify-between items-center border-t border-b border-yellow-600 h-[3.5rem] sm:h-[4rem] md:h-[5rem]">
         <Icon
           icon="solar:hamburger-menu-outline"
           width="24"

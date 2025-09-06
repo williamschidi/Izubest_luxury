@@ -66,7 +66,7 @@ function ViewProduct() {
             <img
               src="/wear-img/img2.jpg"
               alt="product-image"
-              className=" w-[100%] mlg:w-[60%] h-[30rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none"
+              className=" w-[100%] mlg:w-[60%] h-[25rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none"
             />
           </div>
           <div className=" w-full px-2 sm:px-8 py-3">
