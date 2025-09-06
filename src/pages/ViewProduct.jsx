@@ -61,15 +61,15 @@ function ViewProduct() {
           </NavLink>
         </nav>
 
-        <div className=" sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-md px-4 sm:px-0">
-          <div className="w-full flex justify-center items-center bg-gray-200 rounded-l-md">
+        <div className="w-[90%] sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-lg ">
+          <div className="w-full flex justify-center items-center bg-gray-200 rounded-l-md ">
             <img
               src="/wear-img/img2.jpg"
               alt="product-image"
               className=" w-[100%] mlg:w-[60%] h-[25rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none"
             />
           </div>
-          <div className=" w-full px-2 sm:px-8 py-3">
+          <div className=" w-full px-4 sm:px-8 py-3">
             <div className="flex justify-between items-center font-playfair w-[90%] xs:w-[80%] sm:w-[70%] mx-auto">
               <h2 className="font-bold text-xl sm:text-2xl text-gray-600 tracking-tight">
                 Classic Tencel
@@ -97,7 +97,7 @@ function ViewProduct() {
                 </span>
                 <select
                   style={{ backgroundColor: data.color }}
-                  className={`w-full py-4 px-2 rounded-md focus:outline-none text-sm font-semibold bg-white text-gray-600 `}
+                  className={`w-full py-3 px-2 rounded-md focus:outline-none text-sm font-semibold bg-white text-gray-600 `}
                   onChange={handleChange}
                   name="color"
                   value={data.color}
@@ -110,10 +110,10 @@ function ViewProduct() {
                     RED
                   </option>
                   <option
-                    value="Black"
+                    value="orange"
                     className="font-semibold"
                   >
-                    BLACK
+                    Orange
                   </option>
                   <option
                     value="green"
