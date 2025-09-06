@@ -285,7 +285,7 @@ function Collections() {
                 swiper.params.navigation.nextEl =
                   nextRef.current;
               }}
-              spaceBetween={20}
+              spaceBetween={15}
               loop={true}
               navigation={{
                 prevEl: prevRef.current,
@@ -373,7 +373,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 corperateNextRef.current;
             }}
-            spaceBetween={20}
+            spaceBetween={15}
             loop={true}
             navigation={{
               prevEl: corperatePrevRef.current,
@@ -460,7 +460,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 casualNextRef.current;
             }}
-            spaceBetween={20}
+            spaceBetween={15}
             loop={true}
             navigation={{
               prevEl: casualPrevRef.current,
@@ -546,7 +546,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 footWearNextRef.current;
             }}
-            spaceBetween={20}
+            spaceBetween={15}
             loop={true}
             navigation={{
               prevEl: footWearPrevRef.current,
@@ -633,7 +633,7 @@ function Collections() {
               swiper.params.navigation.nextEl =
                 jeweriesNextRef.current;
             }}
-            spaceBetween={20}
+            spaceBetween={15}
             loop={true}
             navigation={{
               prevEl: jeweriesPrevRef.current,
