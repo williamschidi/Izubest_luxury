@@ -61,15 +61,15 @@ function ViewProduct() {
           </NavLink>
         </nav>
 
-        <div className="w-[90%] sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-lg ">
-          <div className="w-full flex justify-center items-center bg-gray-200 rounded-l-md ">
+        <div className="bg-gradient-to-t from-gray-100 to-gray-300 w-[90%] sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-lg ">
+          <div className="w-full flex justify-center items-center rounded-l-md ">
             <img
               src="/wear-img/img2.jpg"
               alt="product-image"
               className=" w-[100%] mlg:w-[60%] h-[25rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none"
             />
           </div>
-          <div className=" w-full px-4 sm:px-8 py-3">
+          <div className=" w-full px-4 sm:px-8 py-3 ">
             <div className="flex justify-between items-center font-playfair w-[90%] xs:w-[80%] sm:w-[70%] mx-auto">
               <h2 className="font-bold text-xl sm:text-2xl text-gray-600 tracking-tight">
                 Classic Tencel

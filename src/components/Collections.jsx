@@ -317,7 +317,7 @@ function Collections() {
                           className="w-full h-[88%] object-cover rounded-t-lg "
                           loading="lazy"
                         />
-                        <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                        <p className="bg-gradient-to-t from-gray-200 to-gray-300 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-700">
                           <span className="">
                             {x.name.replace(
                               x.name[0],
@@ -405,7 +405,7 @@ function Collections() {
                         loading="lazy"
                         className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gradient-to-t from-gray-200 to-gray-3000 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -490,7 +490,7 @@ function Collections() {
                         loading="lazy"
                         className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gradient-to-t from-gray-200 to-gray-300 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -578,7 +578,7 @@ function Collections() {
                         loading="lazy"
                         className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gradient-to-t from-gray-200 to-gray-300 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],
@@ -665,7 +665,7 @@ function Collections() {
                         loading="lazy"
                         className="w-full h-[88%] object-cover rounded-t-lg "
                       />
-                      <p className="bg-gray-200 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
+                      <p className="bg-gradient-to-t from-gray-200 to-gray-300 h-[8%] flex justify-center items-center gap-4 text-sm font-bold py-2 text-gray-500">
                         <span className="">
                           {x.name.replace(
                             x.name[0],

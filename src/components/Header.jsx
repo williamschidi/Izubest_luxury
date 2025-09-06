@@ -93,37 +93,37 @@ function Header({ data }) {
             onClick={() => setToggleMobileNav(false)}
           />
           <ul className="font-playfair w-full bg-gray-800">
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-600 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
               ABOUT
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
               COLLECTIONS
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
               LATEST
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
               TESTIMONY
             </li>
-            <li className="text-yellow-700 text-md px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-yellow-800 hover:text-white font-semibold">
+            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
               SHOP
             </li>
           </ul>
 
-          <div className="text-xs bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent pt-4">
-            <button className="block px-8 py-3 font-bold hover:bg-gradient-to-tr from-yellow-600 to-yellow-900 hover:text-white w-full  text-left">
+          <div className="text-xs text-gray-100 pt-4 ">
+            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
               NATIVE WEARS
             </button>
-            <button className="block px-8 py-3 font-bold hover:bg-gradient-to-tr from-yellow-600 to-yellow-900 hover:text-white w-full  text-left">
+            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
               CORPERATE WEARS
             </button>
-            <button className="block px-8 py-3 font-bold hover:bg-gradient-to-tr from-yellow-600 to-yellow-900 hover:text-white w-full  text-left">
+            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
               CASUAL WEARS
             </button>
-            <button className="block px-8 py-3 font-bold hover:bg-gradient-to-tr from-yellow-600 to-yellow-900 hover:text-white w-full  text-left">
+            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
               FOOT WEARS
             </button>
-            <button className="block px-8 py-3 font-bold hover:bg-gradient-to-tr from-yellow-600 to-yellow-900 hover:text-white w-full  text-left">
+            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
               JEWERIES
             </button>
           </div>
@@ -258,7 +258,7 @@ function Header({ data }) {
           />
           <button
             onClick={handleSubmit}
-            className={`font-bold text-sm px-3 py-1  ${
+            className={`font-bold text-xs sm:text-sm px-3 py-1 tracking-tight ${
               isActive
                 ? "bg-gradient-to-tr from-yellow-800 to-yellow-500 text-white"
                 : ""

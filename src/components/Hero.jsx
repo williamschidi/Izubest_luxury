@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div
       id="hero"
-      className="relative h-[calc(100vh-14rem)] bg-cover bg-center"
+      className="relative h-[calc(100vh-12rem)] sm:h-[calc(100vh-14rem)] bg-cover bg-center"
       style={{ backgroundImage: `url(${bg1})` }}
     >
       <div className="absolute bg-gradient-to-tr from-yellow-800/30 to-yellow-500/20 inset-0"></div>

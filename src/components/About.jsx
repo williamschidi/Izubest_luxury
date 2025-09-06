@@ -5,7 +5,7 @@ import Section from "./Section";
 function About() {
   return (
     <Section>
-      <section className="bg-gray-100 py-14 px-10 lg:px-20">
+      <section className="bg-gray-100 py-12 px-10 lg:px-20">
         <div
           id="about"
           className="max-w-5xl lg:max-w-6xl mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 lg:gap-16 items-center"
