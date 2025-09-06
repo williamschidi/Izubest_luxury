@@ -257,7 +257,7 @@ function Collections() {
     <Section>
       <section
         id="collections"
-        className="text-center pt-[4rem] pb-[2rem]"
+        className="text-center pt-[3.5rem] pb-[2rem]"
       >
         <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
           The Collection

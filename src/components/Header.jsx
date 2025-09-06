@@ -220,7 +220,7 @@ function Header({ data }) {
           </NavLink>
         </div>
       </div>
-      <div className=" px-3 xs:px-6 flex justify-between items-center border-t border-b border-yellow-600 h-[3.5rem] sm:h-[4rem] md:h-[5rem]">
+      <div className=" px-3 xs:px-6 flex justify-between items-center border-t border-b border-yellow-600 h-[3.5rem] sm:h-[4rem] md:h-[5rem] shadow-2xl">
         <Icon
           icon="solar:hamburger-menu-outline"
           width="24"
@@ -349,7 +349,7 @@ function Header({ data }) {
           </div>
         </div>
       </div>
-      <div className="sm:hidden border border-yellow-600  flex justify-between items-center gap 2 bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+      <div className="w-[90%] mx-auto sm:hidden border border-yellow-600  flex justify-between items-center gap-2 rounded-md">
         <input
           onBlur={() => {
             setIsActive(false), setCollections("");
@@ -360,13 +360,11 @@ function Header({ data }) {
           name="collections"
           value={collections}
           onChange={handleOnChange}
-          className="w-[14rem] lg:w-[18rem] rounded-full text-sm focus:outline-none bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent px-3 py-1 font-playfair"
+          className="w-[14rem] lg:w-[18rem] rounded-md text-sm focus:outline-none bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent px-3 py-1 font-playfair"
         />
         <button
           onClick={handleSubmit}
-          className={`font-bold text-sm px-3 py-1 bg-gradient-to-r from-yellow-600 to-yellow-800 text-white ${
-            isActive ? "" : ""
-          }`}
+          className={`font-bold text-sm px-3 py-1 bg-gradient-to-t from-yellow-500 to-yellow-800 text-white rounded-md`}
         >
           SEARCH
         </button>
