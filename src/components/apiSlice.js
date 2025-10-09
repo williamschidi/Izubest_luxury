@@ -6,7 +6,8 @@ import {
 const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/api/v1",
+    baseUrl:
+      "https://izubest-luxury-backend-api.onrender.com",
     credentials: "include",
   }),
   tagTypes: ["collection", "latest"],
