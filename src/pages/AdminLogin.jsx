@@ -49,7 +49,7 @@ function AdminLogin() {
       <div className="max-w-[30rem] sm:max-w-[40rem] m-auto  flex justify-center">
         <form
           onSubmit={handleSubmit}
-          className="w-full space-y-5 shadow-2xl px-8 pt-12 pb-2 rounded-md bg-gradient-to-r from-yellow-600 to-yellow-800"
+          className="w-full space-y-5 shadow-2xl px-8 pt-12 pb-2 rounded-md bg-gradient-to-tr from-yellow-600/60 to-yellow-800/60"
         >
           <div className="flex flex-col justify-start  items-start gap-2 md:flex-row md:justify-between md:items-center md:gap-4">
             <label
@@ -89,11 +89,11 @@ function AdminLogin() {
           </div>
           <div>
             <Button>Login</Button>
-            <p className="text-xs text-gray-200 text-center">
+            <p className="text-xs text-gray-200 text-center pt-3">
               Don't have an account ? Please&nbsp;
               <Link
                 to="/admin/sign-up"
-                className="text-sm font-semibold text-yellow-400"
+                className="text-sm font-semibold text-yellow-800"
               >
                 sign up
               </Link>

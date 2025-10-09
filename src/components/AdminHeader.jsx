@@ -25,13 +25,13 @@ function AdminHeader() {
         />
       )}
 
-      <div className="mr-auto inline-flex justify-start items-center gap-2">
+      <div className="mr-auto inline-flex justify-start items-center gap-1 xs:gap-2">
         <img
           src={logo}
           alt="logo"
           className="w-[2rem] h-[2rem] xs:w-[2.4rem] xs:h-[2.4rem] mlg:w-[3rem] mlg:h-[3rem]"
         />
-        <span className="text-2xl xs:text-3xl sm:text-2xl mlg:text-3xl lg:text-4xl tracking-tight font-playfair font-semibold bg-gradient-to-r from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
+        <span className="text-xl xs:text-2xl mlg:text-3xl lg:text-4xl tracking-tight font-playfair font-semibold bg-gradient-to-r from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
           Izubest Luxury
         </span>
       </div>

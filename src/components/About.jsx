@@ -5,11 +5,11 @@ import Section from "./Section";
 function About() {
   return (
     <Section>
-      <section className="bg-gray-100 py-12 px-10 lg:px-20">
-        <div
-          id="about"
-          className="max-w-5xl lg:max-w-6xl mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 lg:gap-16 items-center"
-        >
+      <div
+        id="about"
+        className="bg-gray-100 py-12 px-10 lg:px-20"
+      >
+        <div className="max-w-5xl lg:max-w-6xl mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 lg:gap-16 items-center">
           <div className="flex-1 h-[30rem]">
             <img
               src={image2}
@@ -46,7 +46,7 @@ function About() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </Section>
   );
 }

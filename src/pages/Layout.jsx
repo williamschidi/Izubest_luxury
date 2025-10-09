@@ -14,7 +14,7 @@ function Layout() {
   return (
     <div>
       <Header data={data} />
-      <Outlet />
+      <Outlet context={data} />
     </div>
   );
 }

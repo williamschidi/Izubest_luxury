@@ -1,7 +1,7 @@
 function Button({ children }) {
   return (
-    <div className="text-center py-2">
-      <button className="text-sm font-playfair bg-gradient-to-tr from-yellow-300 to-yellow-700 hover:from-yellow-500 hover:to-yellow-800 text-gray-100 border border-gray-200 px-4 py-[2px] transition active:scale-95 rounded-full">
+    <div className="text-center">
+      <button className="text-sm sm:text-base font-playfair bg-gradient-to-t from-yellow-400 to-yellow-700 hover:from-yellow-500  hover:to-yellow-800 hover:scale-105 active:scale-95 text-gray-100 border border-gray-200 px-6 py-[2px] transition rounded-full">
         {children}
       </button>
     </div>
