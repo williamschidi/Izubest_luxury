@@ -42,7 +42,7 @@ function Cart() {
               <div className="flex-1 text-center">
                 price
               </div>
-              <div className="flex-[1.5] text-center">
+              <div className="flex-1 sm:flex-[1.5] text-center">
                 QTY
               </div>
               <div className="flex-1 text-center">
@@ -55,7 +55,7 @@ function Cart() {
             {cart.items.map((x) => (
               <div
                 key={x.id}
-                className="flex justify-between gap-2 px-0 sm:px-4 py-2 text-sm font-semibold items-center hover:bg-gradient-to-tr from-gray-50 to-gray-100"
+                className="flex justify-between gap-2 px-2 sm:px-4 py-1 text-sm font-semibold items-center hover:bg-gradient-to-tr from-gray-50 to-gray-100"
               >
                 <div className="flex-1 sm:flex-[1.5] inline-flex flex-col sm:flex-row justify-start items-start sm:items-center gap-1 sm:gap-3">
                   <div className="w-[2rem] sm:w-[2.4rem] h-[2rem] sm:h-[2.4rem]">
@@ -65,7 +65,9 @@ function Cart() {
                       className="w-[100%] h-[100%]"
                     />
                   </div>
-                  <span>{x?.name}</span>
+                  <span className="hidden sm:block">
+                    {x?.name}
+                  </span>
                 </div>
                 <div className="flex-1 text-center">
                   {x.color}
@@ -73,7 +75,7 @@ function Cart() {
                 <div className="flex-1 text-center">
                   ${x.price}
                 </div>
-                <div className="flex-[1.5] flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 pr-2">
+                <div className="flex-1 sm:flex-[1.5] flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 pr-0 sm:pr-2">
                   <button
                     className="text-gray-700 py-2"
                     onClick={() =>
