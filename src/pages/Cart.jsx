@@ -140,7 +140,7 @@ function Cart() {
                   Shipping
                 </dt>
                 <dd className="text-gray-800 font-semibold text-sm">
-                  0.00
+                  ${cart.shipping}
                 </dd>
               </div>
               <div className="flex justify-between items center px-4 py-1">
