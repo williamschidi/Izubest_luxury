@@ -33,7 +33,7 @@ function Cart() {
         <div className="flex flex-col mlg:flex-row justify-between items-start gap-16 mlg:gap-8  px-2 sm:px-8 lg:px-2">
           <div className="w-full sm:w-[90%] mlg:w-[60%] mx-auto mlg:mx-0 border border-gray-100 rounded-md space-y-2 sm:space-y-3 pb-[4rem] mlg:pb-0">
             <div className="rounded-t-md capitalize text-xs sm:text-sm font-bold text-gray-700 tracking-wide flex justify-between items-center gap-3 bg-gradient-to-t from-gray-100 to-gray-200 px-2 sm:px-4 py-2">
-              <div className="flex-[1.5] text-center">
+              <div className="flex-1 sm:flex-[1.5] text-center">
                 item
               </div>
               <div className="flex-1 text-center">
@@ -57,7 +57,7 @@ function Cart() {
                 key={x.id}
                 className="flex justify-between gap-2 px-2 sm:px-4 py-1 text-sm font-semibold items-center hover:bg-gradient-to-tr from-gray-50 to-gray-100"
               >
-                <div className="flex-1 sm:flex-[1.5] inline-flex flex-col sm:flex-row justify-start items-start sm:items-center gap-1 sm:gap-3">
+                <div className="flex-1 sm:flex-[1.5] inline-flex flex-col sm:flex-row justify-center  items-center gap-0 sm:gap-3">
                   <div className="w-[2rem] sm:w-[2.4rem] h-[2rem] sm:h-[2.4rem]">
                     <img
                       src={x?.image}
@@ -75,9 +75,9 @@ function Cart() {
                 <div className="flex-1 text-center">
                   ${x.price}
                 </div>
-                <div className="flex-1 sm:flex-[1.5] flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 pr-0 sm:pr-2">
+                <div className="flex-1 sm:flex-[1.5] flex flex-col sm:flex-row justify-center items-center gap-[6px] sm:gap-4 pr-0 sm:pr-2">
                   <button
-                    className="text-gray-700 py-2"
+                    className="text-gray-700 py-0 sm:py-2"
                     onClick={() =>
                       dispatch(decreaseQuantity(x.id))
                     }
@@ -91,7 +91,7 @@ function Cart() {
                   </button>
                   <span>{x.quantity}</span>
                   <button
-                    className="text-gray-700 py-2"
+                    className="text-gray-700 py-0 py-2"
                     onClick={() =>
                       dispatch(increaseQuantity(x.id))
                     }
