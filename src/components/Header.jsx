@@ -46,6 +46,13 @@ function Header({ data }) {
     }
   }
 
+  function handleMobileNav() {
+    setToggleMobileNav(false);
+    if (location.pathname !== "/") {
+      navigate("/");
+    }
+  }
+
   function handleCart() {
     navigate("/cart");
   }
@@ -109,20 +116,45 @@ function Header({ data }) {
             onClick={() => setToggleMobileNav(false)}
           />
           <ul className="font-playfair w-full bg-gray-800">
-            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-600 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
-              ABOUT
+            <li
+              onClick={() => handleMobileNav()}
+              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-600 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
+            >
+              <HashLink smooth to="#about">
+                ABOUT
+              </HashLink>
             </li>
-            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
-              COLLECTIONS
+            <li
+              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
+              onClick={() => handleMobileNav()}
+            >
+              <HashLink smooth to="#collections">
+                COLLECTIONS
+              </HashLink>
             </li>
-            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
-              LATEST
+            <li
+              onClick={() => handleMobileNav()}
+              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
+            >
+              <HashLink smooth to="#latest">
+                LATEST
+              </HashLink>
             </li>
-            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
-              TESTIMONY
+            <li
+              onClick={() => handleMobileNav()}
+              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
+            >
+              <HashLink smooth to="#testimony">
+                TESTIMONY
+              </HashLink>
             </li>
-            <li className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold">
-              SHOP
+            <li
+              onClick={() => handleMobileNav()}
+              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
+            >
+              <HashLink smooth to="#location">
+                SHOP
+              </HashLink>
             </li>
           </ul>
 
