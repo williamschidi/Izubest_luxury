@@ -9,10 +9,13 @@ import {
 } from "react-router-dom";
 import { useGetCollectionQuery } from "../components/apiSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Spinner from "../components/Spinner";
 
 function ViewProduct() {
   const data = useOutletContext();
   const location = useLocation();
+
+  const [imgLoading, setImgLoading] = useState(true);
 
   useEffect(() => {
     if ((location.pathname = "/product")) {
@@ -67,11 +70,20 @@ function ViewProduct() {
         </nav>
 
         <div className="bg-gradient-to-t from-gray-100 to-gray-300 w-[90%] sm:w-[80%] mlg:w-[90%] mx-auto flex flex-col mlg:flex-row justify-between items-stretch gap-3 mlg:gap-0  shadow-2xl rounded-lg ">
-          <div className="w-full flex justify-center items-center rounded-l-md ">
+          <div className="relative w-full flex justify-center items-center rounded-l-md ">
+            {imgLoading && (
+              <div className="absolute inset-0 flex justify-center items-center bg-gray-50">
+                <Spinner />
+              </div>
+            )}
             <img
               src={`${baseUrl}/w_250,h_330,c_fill,g_auto,f_auto,q_auto/${productDetail?.getCollection?.design?.id}`}
               alt="product-image"
-              className=" w-[100%] mlg:w-[60%] h-[25rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none"
+              className={`w-[100%] mlg:w-[60%] h-[25rem] sm:h-[35rem] mlg:h-full rounded-t-md mlg:rounded-none transition-opacity ${
+                imgLoading ? "opacity-0" : "opacity-100"
+              }`}
+              loading="lazy"
+              onLoad={() => setImgLoading(false)}
             />
           </div>
           <div className=" w-full px-4 sm:px-8 py-3 sm:py-5 mlg:py-7">

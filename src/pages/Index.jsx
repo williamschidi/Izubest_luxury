@@ -1,9 +1,7 @@
 import { lazy, Suspense, useState } from "react";
-
-// import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Collections from "../components/Collections";
+// import Collections from "../components/Collections";
 import Latest1 from "../components/Latest1";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
@@ -25,7 +23,6 @@ function Index() {
 
   return (
     <div className="">
-      {/* <Header data={data} /> */}
       <Hero />
       <About />
       {/* <Collections /> */}
