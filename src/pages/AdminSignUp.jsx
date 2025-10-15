@@ -183,7 +183,7 @@ function AdminSignup() {
             <p className="text-xs text-gray-200 text-center">
               Already has an account ? kindly &nbsp;
               <Link
-                to="/login"
+                to="/admin/login"
                 className="text-sm font-semibold text-yellow-400"
               >
                 login
