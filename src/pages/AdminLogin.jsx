@@ -103,7 +103,7 @@ function AdminLogin() {
             <p className="text-xs text-gray-200 text-center pt-3">
               Don't have an account ? Please&nbsp;
               <Link
-                to="/admin/sign-up"
+                to="/admin/signup"
                 className="text-sm font-semibold text-yellow-400"
               >
                 sign up

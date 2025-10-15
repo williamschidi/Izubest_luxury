@@ -11,7 +11,7 @@ function ProtectMe() {
 
   if (isLoading)
     return (
-      <div>
+      <div className="relative w-full h-screen">
         <Spinner />
       </div>
     );
