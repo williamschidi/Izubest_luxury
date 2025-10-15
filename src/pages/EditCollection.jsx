@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import {
   useGetCollectionQuery,
   useUpdateCollectionMutation,
-} from "../components/apiSlice";
+} from "../components/feature/apiFeatures/apiSlice";
 import Button from "../components/Button";
 
 function EditCollection() {

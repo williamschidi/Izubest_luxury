@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../components/Button";
 import { toast } from "react-toastify";
-import { usePostLatestMutation } from "../components/apiSlice";
+import { usePostLatestMutation } from "../components/feature/apiFeatures/apiSlice";
 
 function CreateLatext() {
   const [latest, setLatest] = useState({

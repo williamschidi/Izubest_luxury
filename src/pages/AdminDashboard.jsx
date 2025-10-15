@@ -1,13 +1,17 @@
 import { NavLink, Outlet } from "react-router-dom";
-
-import logo1 from "./../assets/logo-2.jpg";
 import { Icon } from "@iconify/react/dist/iconify.js";
-// import Nav from "../container/Nav";
+import { motion } from "framer-motion";
 
 function AdminDashboard() {
   return (
-    <div className="flex-1 flex justify-center items-start shadow-2xl ">
-      <aside className="w-[7.5rem] xs:w-[10rem] bg-gradient-to-r from-yellow-500 to-yellow-800 h-full">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 100 }}
+      transition={{ duration: 0.8 }}
+      className="flex-1 flex justify-center items-start shadow-2xl "
+    >
+      <aside className="hidden sm:block w-[7.5rem] xs:w-[10rem] bg-gradient-to-r from-yellow-500 to-yellow-800 h-full">
         <ul className=" space-y-8 py-4">
           <li className="group hover:bg-gradient-to-r from-yellow-400 to-yellow-700 w-full transition-all duration-1000 ease-in-out">
             <NavLink
@@ -129,10 +133,10 @@ function AdminDashboard() {
         </ul>
       </aside>
 
-      <main className="flex-1">
+      <main className="flex-1 bg-gradient-to-tr from-gray-50 to-gray-200">
         <Outlet />
       </main>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,11 +1,12 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { motion } from "framer-motion";
 import {
   decreaseQuantity,
   deleteItem,
   increaseQuantity,
-} from "../components/cartSlice";
+} from "../components/feature/cartSlice";
 
 function Cart() {
   const [quantity, setQuantity] = useState(1);
@@ -26,12 +27,21 @@ function Cart() {
         Your Cart
       </p>
       {cart?.items.length === 0 ? (
-        <p className="text-lg capitalize font-semibold text-center text-gray-700">
+        <p
+          data-aos="fade-up"
+          className="text-lg capitalize font-semibold text-center text-gray-700"
+        >
           Your cart is empty, please add items to cart
         </p>
       ) : (
         <div className="flex flex-col mlg:flex-row justify-between items-start gap-16 mlg:gap-8  px-2 sm:px-8 lg:px-2">
-          <div className="w-full sm:w-[90%] mlg:w-[60%] mx-auto mlg:mx-0 border border-gray-100 rounded-md space-y-2 sm:space-y-3 pb-[4rem] mlg:pb-0">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.8 }}
+            className="w-full sm:w-[90%] mlg:w-[60%] mx-auto mlg:mx-0 border border-gray-100 rounded-md space-y-2 sm:space-y-3 pb-[4rem] mlg:pb-0"
+          >
             <div className="rounded-t-md capitalize text-xs sm:text-sm font-bold text-gray-700 tracking-wide flex justify-between items-center gap-3 bg-gradient-to-t from-gray-100 to-gray-200 px-2 sm:px-4 py-2">
               <div className="flex-1 sm:flex-[1.5] text-center">
                 item
@@ -119,9 +129,15 @@ function Cart() {
                 </button>
               </div>
             ))}
-          </div>
+          </motion.div>
 
-          <div className=" w-full sm:w-[90%] mlg:w-[40%] mx-auto mlg:mx-0 border border-gray-100 rounded-md  space-y-4 pb-[2rem]">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.8 }}
+            className=" w-full sm:w-[90%] mlg:w-[40%] mx-auto mlg:mx-0 border border-gray-100 rounded-md  space-y-4 pb-[2rem]"
+          >
             <div className="bg-gradient-to-t from-gray-100 to-gray-200 rounded-t-md">
               <p className=" text-center py-2 uppercase text-sm font-bold">
                 order summary
@@ -163,7 +179,7 @@ function Cart() {
                 Checkout
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
     </div>

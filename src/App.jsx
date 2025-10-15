@@ -1,5 +1,9 @@
 import Index from "./pages/Index";
-import { Routes, Route } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import AdminLogin from "./pages/AdminLogin";
 import AdminIndex from "./pages/AdminIndex";
 import AdminSignup from "./pages/AdminSignUp";
@@ -13,8 +17,23 @@ import { ToastContainer } from "react-toastify";
 import EditCollection from "./pages/EditCollection";
 import GetCollections from "./pages/GetCollections";
 import EditLatest from "./pages/EditLatest";
+import ProtectMe from "./components/ProtectMe";
+import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 0,
+      once: true,
+      easing: "ease-in-out",
+    });
+    window.addEventListener("load", AOS.refresh);
+  }, []);
   return (
     <>
       <ToastContainer
@@ -26,48 +45,58 @@ function App() {
         pauseOnHover
         draggable
       />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Index />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route
-            path="/product/:id"
-            element={<ViewProduct />}
-          />
-        </Route>
-
-        <Route path="admin" element={<AdminIndex />}>
-          <Route index element={<AdminLogin />} />
-          <Route path="login" element={<AdminLogin />} />
-          <Route path="sign-up" element={<AdminSignup />} />
-          <Route
-            path="dashboard"
-            element={<AdminDashboard />}
-          >
-            <Route index element={<CreateCollection />} />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Index />} />
+            <Route path="/cart" element={<Cart />} />
             <Route
-              path="create-collection"
-              element={<CreateCollection />}
-            />
-            <Route
-              path="get-collections"
-              element={<GetCollections />}
-            />
-            <Route
-              path="edit-collection/:id"
-              element={<EditCollection />}
-            />
-            <Route
-              path="create-latest"
-              element={<CreateLatest />}
-            />
-            <Route
-              path="edit-latest"
-              element={<EditLatest />}
+              path="/product/:id"
+              element={<ViewProduct />}
             />
           </Route>
-        </Route>
-      </Routes>
+
+          <Route path="admin" element={<AdminIndex />}>
+            <Route index element={<AdminLogin />} />
+            <Route path="login" element={<AdminLogin />} />
+            <Route
+              path="signup"
+              element={<AdminSignup />}
+            />
+            <Route element={<ProtectMe />}>
+              <Route
+                path="dashboard"
+                element={<AdminDashboard />}
+              >
+                <Route
+                  index
+                  element={<CreateCollection />}
+                />
+                <Route
+                  path="create-collection"
+                  element={<CreateCollection />}
+                />
+                <Route
+                  path="get-collections"
+                  element={<GetCollections />}
+                />
+                <Route
+                  path="edit-collection/:id"
+                  element={<EditCollection />}
+                />
+                <Route
+                  path="create-latest"
+                  element={<CreateLatest />}
+                />
+                <Route
+                  path="edit-latest"
+                  element={<EditLatest />}
+                />
+              </Route>
+            </Route>
+          </Route>
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { addToCart } from "./../components/cartSlice";
+import { addToCart } from "../components/feature/cartSlice";
 import { useEffect, useState } from "react";
 import {
   NavLink,
@@ -7,9 +7,10 @@ import {
   useOutletContext,
   useParams,
 } from "react-router-dom";
-import { useGetCollectionQuery } from "../components/apiSlice";
+import { useGetCollectionQuery } from "../components/feature/apiFeatures/apiSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Spinner from "../components/Spinner";
+import { motion } from "framer-motion";
 
 function ViewProduct() {
   const data = useOutletContext();
@@ -37,7 +38,13 @@ function ViewProduct() {
   }
 
   return (
-    <div className="bg-gray-100 ">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 100, y: -100 }}
+      transition={{ duration: 0.8 }}
+      className="bg-gray-100 "
+    >
       <div className="max-w-[70rem] mx-auto pt-2 pb-3 space-y-4">
         <nav className="space-x-2 px-4">
           <NavLink
@@ -149,7 +156,7 @@ function ViewProduct() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

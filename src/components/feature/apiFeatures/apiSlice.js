@@ -7,11 +7,11 @@ const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl:
-      "https://izubest-luxury-backend-api.onrender.com/api/v1",
-    // "http://localhost:3000/api/v1",
+      // "https://izubest-luxury-backend-api.onrender.com/api/v1",
+      "http://localhost:3000/api/v1",
     credentials: "include",
   }),
-  tagTypes: ["collection", "latest"],
+  tagTypes: ["collection", "latest", "admin"],
   endpoints: (builder) => ({
     getAllCollections: builder.query({
       query: ({ page = 1, limit = 15 }) =>
@@ -70,11 +70,54 @@ const apiSlice = createApi({
       }),
       invalidatesTags: ["latest"],
     }),
+    adminLogin: builder.mutation({
+      query: (data) => ({
+        url: "/admin/login",
+        method: "POST",
+        body: data,
+        credentials: "include",
+      }),
+      invalidatesTags: ["admin"],
+    }),
+    adminSignup: builder.mutation({
+      query: (data) => ({
+        url: "/admin/signup",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["admin"],
+    }),
+    adminUpdate: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/admin/update/${id}`,
+        method: "PATCH",
+        body: data,
+      }),
+      invalidatesTags: ["admin"],
+    }),
+    adminDelete: builder.mutation({
+      query: (id) => ({
+        url: `/admin/delete/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["admin"],
+    }),
+    getMe: builder.query({
+      query: () => "/admin/getMe",
+      providesTags: ["admin"],
+    }),
+    AdminLogout: builder.mutation({
+      query: () => ({
+        url: "/admin/logout",
+        method: "POST",
+      }),
+    }),
   }),
 });
 
 export const {
   useGetAllCollectionsQuery,
+  useGetSearchCollectionQuery,
   useLazyGetSearchCollectionQuery,
   useGetCollectionQuery,
   usePostCollectionMutation,
@@ -83,5 +126,11 @@ export const {
   useGetLatestQuery,
   usePostLatestMutation,
   useUpdateLatestMutation,
+  useAdminLoginMutation,
+  useAdminSignupMutation,
+  useAdminUpdateMutation,
+  useAdminDeleteMutation,
+  useAdminLogoutMutation,
+  useGetMeQuery,
 } = apiSlice;
 export default apiSlice;

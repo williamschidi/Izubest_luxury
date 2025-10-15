@@ -11,8 +11,9 @@ function Layout() {
     isSticky,
     setIsSticky,
   };
+
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header data={data} />
       <Outlet context={data} />
     </div>

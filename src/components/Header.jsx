@@ -9,11 +9,13 @@ import logo from "./../assets/logo1.jpg";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
+import MobileToggleNav from "./MobileToggleNav";
 
 function Header({ data }) {
   const navRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [showIcon, setShowIcon] = useState(true);
+  const [searchValue, setSearchValue] = useState("");
   const [toggleMobileNav, setToggleMobileNav] =
     useState(false);
 
@@ -22,32 +24,28 @@ function Header({ data }) {
 
   const state = useSelector((state) => state.cart);
 
-  const {
-    collections,
-    setCollections,
-    isSticky,
-    setIsSticky,
-  } = data;
+  const { setCollections, isSticky, setIsSticky } = data;
 
   function handleOnChange(e) {
-    setCollections(e.target.value);
+    setSearchValue(e.target.value);
   }
 
+  function handlekeyDown(e) {
+    e.preventDefault();
+    if (e.key === "Enter" && searchValue.trim() !== "") {
+      setCollections(searchValue);
+      setSearchValue("");
+    }
+  }
   function handleSubmit(e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      setCollections("");
-      setIsActive(false);
-    }
-  }
-  function handleNavigation(tab) {
-    if (location.pathname !== "/") {
-      navigate("/", { state: { scrollTo: tab } });
+    e.preventDefault();
+    if (searchValue.trim() !== "") {
+      setCollections(searchValue);
+      setSearchValue("");
     }
   }
 
-  function handleMobileNav() {
-    setToggleMobileNav(false);
+  function handleNavigation(tab) {
     if (location.pathname !== "/") {
       navigate("/");
     }
@@ -85,107 +83,23 @@ function Header({ data }) {
       ref={navRef}
       className={`${
         isSticky
-          ? "fixed top-0 bg-gray-50/90 z-20 shadow-lg transition-all"
+          ? "fixed top-0 bg-gray-50 z-20 shadow-lg transition-all"
           : ""
       } w-full`}
     >
       {/* toggle nav menu */}
-      <div
-        className={`fixed w-full sm:w-[60%] bg-gray-700 transition-all duration-500 top-0 bottom-0 z-50 ${
-          toggleMobileNav
-            ? "right-0 sm:right-[40%] mlg:right-[100%]"
-            : "right-[100%]  "
-        }  `}
-      >
-        <div className="relative ">
-          <h2 className="flex justify-center items-center gap-2 bg-white py-2">
-            <img
-              src={logo}
-              alt="logo"
-              className="w-[2rem] h-[2rem] xs:w-[2.4rem] xs:h-[2.4rem]"
-            />
-            <span className="text-xl xs:text-3xl tracking-tighter font-playfair font-semibold bg-gradient-to-r from-yellow-400 to-yellow-800 bg-clip-text text-transparent">
-              Izubest Luxury
-            </span>
-          </h2>
-          <Icon
-            icon="mingcute:close-fill"
-            width="24"
-            height="24"
-            className="absolute top-2 right-3 text-yellow-700"
-            onClick={() => setToggleMobileNav(false)}
-          />
-          <ul className="font-playfair w-full bg-gray-800">
-            <li
-              onClick={() => handleMobileNav()}
-              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-600 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
-            >
-              <HashLink smooth to="#about">
-                ABOUT
-              </HashLink>
-            </li>
-            <li
-              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
-              onClick={() => handleMobileNav()}
-            >
-              <HashLink smooth to="#collections">
-                COLLECTIONS
-              </HashLink>
-            </li>
-            <li
-              onClick={() => handleMobileNav()}
-              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
-            >
-              <HashLink smooth to="#latest">
-                LATEST
-              </HashLink>
-            </li>
-            <li
-              onClick={() => handleMobileNav()}
-              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
-            >
-              <HashLink smooth to="#testimony">
-                TESTIMONY
-              </HashLink>
-            </li>
-            <li
-              onClick={() => handleMobileNav()}
-              className="text-gray-50 text-sm px-8 py-4 border-b border-gray-500 cursor-pointer hover:bg-gradient-to-t from-gray-400 to-gray-700 hover:text-gray-800 font-semibold"
-            >
-              <HashLink smooth to="#location">
-                SHOP
-              </HashLink>
-            </li>
-          </ul>
-
-          <div className="text-xs text-gray-100 pt-4 ">
-            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
-              NATIVE WEARS
-            </button>
-            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
-              CORPERATE WEARS
-            </button>
-            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
-              CASUAL WEARS
-            </button>
-            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
-              FOOT WEARS
-            </button>
-            <button className="block px-12 py-3 font-bold hover:bg-gradient-to-tr from-gray-400 to-gray-700 hover:text-gray-800 w-full  text-left">
-              JEWERIES
-            </button>
-          </div>
-        </div>
-      </div>
-
+      <MobileToggleNav
+        setToggleMobileNav={setToggleMobileNav}
+        toggleMobileNav={toggleMobileNav}
+      />
       {!isSticky ? (
-        <div className="hidden mlg:flex justify-between items-center bg-gradient-to-r from-yellow-500 to-yellow-800 px-6 h-[3rem] w-full">
+        <div className="hidden mlg:flex justify-between items-center bg-gradient-to-r from-yellow-500 to-yellow-800 px-6 h-[2.4rem] w-full">
           <div className="inline-flex justify-start items-center gap-3">
             <a
               href="http://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[1.7rem] h-[1.7rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-blue-900"
+              className="w-[1.4rem] h-[1.4rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-blue-900"
             >
               <Icon
                 icon="basil:facebook-solid"
@@ -198,7 +112,7 @@ function Header({ data }) {
               href="http://www.twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[1.7rem] h-[1.7rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-blue-500"
+              className="w-[1.4rem] h-[1.4rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-blue-500"
             >
               <Icon
                 icon="si:twitter-fill"
@@ -211,7 +125,7 @@ function Header({ data }) {
               href="http://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[1.7rem] h-[1.7rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-gradient-to-b from-orange-700 to-yellow-600"
+              className="w-[1.4rem] h-[1.4rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-gradient-to-b from-orange-700 to-yellow-600"
             >
               <Icon
                 icon="flowbite:instagram-solid"
@@ -224,7 +138,7 @@ function Header({ data }) {
               href="http://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[1.7rem] h-[1.7rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-orange-600"
+              className="w-[1.4rem] h-[1.4rem] rounded-full bg-yellow-700 inline-flex justify-center items-center hover:bg-orange-600"
             >
               <Icon
                 icon="iconoir:youtube-solid"
@@ -312,10 +226,22 @@ function Header({ data }) {
             type="text"
             placeholder="Search Collections ..."
             name="collections"
-            value={collections}
+            value={searchValue}
             onChange={handleOnChange}
             className="w-[12rem] md:w-[14rem] rounded-full text-sm focus:outline-none bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent px-3 py-1 font-playfair"
+            list="wear"
+            onClick={handleSubmit}
           />
+          <datalist
+            id="wear"
+            className="text-sm font-light"
+          >
+            <option value="native-wear" />
+            <option value="casual-wear" />
+            <option value="corperate-wear" />
+            <option value="foot-wear" />
+            <option value="jeweries" />
+          </datalist>
           <button
             onClick={handleSubmit}
             className={`font-bold text-xs sm:text-sm px-3 py-1 tracking-tight ${
@@ -393,9 +319,21 @@ function Header({ data }) {
                     placeholder="search collections..."
                     name="search"
                     onChange={handleOnChange}
-                    onKeyDown={handleSubmit}
+                    onKeyDown={handlekeyDown}
                     className="rounded-full pl-10  border border-gray-500 outline-none focus:ring  focus:ring-yellow-700 text-gray-700"
+                    list="wear"
                   />
+                  <datalist
+                    id="wear"
+                    className="text-sm font-light"
+                  >
+                    <option value="native-wear" />
+                    <option value="casual-wear" />
+                    <option value="corperate-wear" />
+                    <option value="foot-wear" />
+                    <option value="jeweries" />
+                  </datalist>
+
                   <button
                     className="absolute inset-y-0 left-2"
                     onClick={() => {
@@ -506,10 +444,22 @@ function Header({ data }) {
               type="text"
               placeholder="Search Collections ..."
               name="collections"
-              value={collections}
+              value={searchValue}
               onChange={handleOnChange}
+              onClick={handleSubmit}
               className="w-[14rem] lg:w-[18rem] rounded-full text-sm focus:outline-none bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent px-3 py-1 font-playfair"
+              list="wear"
             />
+            <datalist
+              id="wear"
+              className="text-sm font-light"
+            >
+              <option value="native-wear" />
+              <option value="casual-wear" />
+              <option value="corperate-wear" />
+              <option value="foot-wear" />
+              <option value="jeweries" />
+            </datalist>
             <button
               onClick={handleSubmit}
               className={`font-bold text-sm px-3 py-1 ${

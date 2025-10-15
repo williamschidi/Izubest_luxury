@@ -3,7 +3,7 @@ import {
   useDeleteCollectionMutation,
   useGetAllCollectionsQuery,
   useLazyGetSearchCollectionQuery,
-} from "../components/apiSlice";
+} from "../components/feature/apiFeatures/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "react-toastify";

@@ -1,8 +1,8 @@
 import { useState } from "react";
-// import Button from "../container/Button";
+
 import { toast } from "react-toastify";
 import Button from "../components/Button";
-import { usePostCollectionMutation } from "../components/apiSlice";
+import { usePostCollectionMutation } from "../components/feature/apiFeatures/apiSlice";
 
 function CreateCollection() {
   const [addPost] = usePostCollectionMutation();
@@ -52,9 +52,6 @@ function CreateCollection() {
         formData.append("colors", color)
       );
 
-      // formData.forEach((key, value) =>
-      //   console.log(value, key)
-      // );
       await addPost(formData).unwrap();
       toast.success("Post successful created", {
         className: "w-[500px] text-green-600",

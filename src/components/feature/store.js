@@ -8,7 +8,7 @@ import {
   persistStore,
 } from "redux-persist";
 import cartReducer from "./cartSlice";
-import apiSlice from "./apiSlice";
+import apiSlice from "./apiFeatures/apiSlice";
 
 const persistConfig = {
   key: "cart",

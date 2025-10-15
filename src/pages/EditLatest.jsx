@@ -3,7 +3,7 @@ import Button from "../components/Button";
 import {
   useGetLatestQuery,
   useUpdateLatestMutation,
-} from "../components/apiSlice";
+} from "../components/feature/apiFeatures/apiSlice";
 import { toast } from "react-toastify";
 
 function EditLatest() {

@@ -5,7 +5,7 @@ function Footer() {
   const location = useLocation();
 
   return (
-    <div className="text-center ">
+    <div className="text-center z-[1000]">
       <div
         className={`bg-gray-800/80 ${
           location.pathname.startsWith("/admin")
