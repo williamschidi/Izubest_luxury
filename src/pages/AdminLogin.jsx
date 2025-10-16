@@ -32,7 +32,6 @@ function AdminLogin() {
       );
       await login(cleanData).unwrap();
       toast.success("login successful");
-
       navigate("/admin/dashboard");
     } catch (err) {
       toast.error(err.data.message);
