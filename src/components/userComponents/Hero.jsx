@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div
       id="hero"
-      className="relative h-[calc(100vh-10rem)] sm:h-[calc(100vh-12rem)] bg-cover bg-center"
+      className="relative h-[calc(100vh-8rem)] sm:h-[calc(100vh-12rem)] bg-cover bg-center"
       style={{ backgroundImage: `url(${bg1})` }}
     >
       <div className="absolute bg-gradient-to-tr from-yellow-800/10 to-yellow-500/10 inset-0"></div>
@@ -14,7 +14,7 @@ function Hero() {
           <h1 className="text-3xl md:text-4xl  font-bold mb-2 md:mb-4 text-white  font-poppins tracking-tighter">
             Elevate Your Style
           </h1>
-          <p className="text-md md:text-lg max-w-[24rem] text-center md:text-left mlg:max-w-full mb-4 md:mb-6 text-white font-bold md:font-medium font-calligraphy px-2">
+          <p className="text-lg max-w-[24rem] text-center md:text-left mlg:max-w-full mb-4 md:mb-6 text-white font-semibold md:font-medium font-calligraphy px-2">
             Discover unique, modern, and culturally inspired
             designs tailored for you.
           </p>
