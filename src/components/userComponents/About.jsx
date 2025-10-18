@@ -1,4 +1,4 @@
-import image2 from "./../assets/hero-img1.webp";
+import image2 from "./../../assets/hero-img1.webp";
 
 function About() {
   return (

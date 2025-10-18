@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import logo from "./../assets/logo1.jpg";
+import logo from "./../../assets/logo1.jpg";
 import { useNavigate } from "react-router-dom";
 function AdminMobileNav({
   setToggleMobileNav,

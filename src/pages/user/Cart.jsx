@@ -6,7 +6,7 @@ import {
   decreaseQuantity,
   deleteItem,
   increaseQuantity,
-} from "../components/feature/cartSlice";
+} from "../../components/feature/cartSlice";
 
 function Cart() {
   const [quantity, setQuantity] = useState(1);

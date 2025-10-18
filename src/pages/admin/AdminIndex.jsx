@@ -1,7 +1,7 @@
 import { useState } from "react";
-import AdminHeader from "../components/AdminHeader";
+import AdminHeader from "../../components/adminComponents/AdminHeader";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "../../components/userComponents/Footer";
 
 function AdminIndex() {
   const [isAuth, setIsAuth] = useState(false);

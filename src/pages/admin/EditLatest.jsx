@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Button from "../components/Button";
+import Button from "../../components/userComponents/Button";
 import {
   useGetLatestQuery,
   useUpdateLatestMutation,
-} from "../components/feature/apiFeatures/apiSlice";
+} from "../../components/feature/apiFeatures/apiSlice";
 import { toast } from "react-toastify";
 
 function EditLatest() {

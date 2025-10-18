@@ -5,11 +5,12 @@ import { toast } from "react-toastify";
 import {
   useGetCollectionQuery,
   useUpdateCollectionMutation,
-} from "../components/feature/apiFeatures/apiSlice";
-import Button from "../components/Button";
+} from "../../components/feature/apiFeatures/apiSlice";
+import Button from "../../components/userComponents/Button";
 
 function EditCollection() {
   const { id } = useParams();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const data = useGetCollectionQuery(id);
   const [updateCollection] = useUpdateCollectionMutation();
@@ -33,7 +34,7 @@ function EditCollection() {
         comment: fetchData?.comment || "",
       });
     }
-  }, []);
+  }, [data]);
 
   function handleFilesOnChange(e) {
     const file = e.target.files[0];
@@ -55,6 +56,7 @@ function EditCollection() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
       const formData = new FormData();
 
@@ -63,7 +65,10 @@ function EditCollection() {
       formData.append("category", postData.category.trim());
       formData.append("name", postData.name.trim());
       formData.append("comment", postData.comment.trim());
-      formData.append("design", postData.design);
+      if (postData.design) {
+        formData.append("design", postData.design);
+      }
+
       postData.colors.forEach((color) =>
         formData.append("colors", color)
       );
@@ -84,12 +89,23 @@ function EditCollection() {
           className: "w-[500px] text-red-500",
         });
       } else {
+        setIsSubmitting(false);
         toast.error("Failed to update collection", {
           className: "w-[500px] text-red-500",
         });
       }
     }
   }
+
+  // if (isLoading) {
+  //   return (
+  //     <div className="flex justify-center items-center h-screen">
+  //       <p className="font-semibold">
+  //         Loading Collection....
+  //       </p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <form
@@ -173,7 +189,7 @@ function EditCollection() {
             placeholder="color(s) (e.g red, black, green)"
             name="colors"
             onChange={handleOnChange}
-            value={postData.colors.join(", ")}
+            value={postData.colors?.join(", ")}
             required
             className="w-[100%] sm:flex-[6]  text-xs font-semibold py-[6px] text-yellow-700 px-2 rounded-md border border-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-800"
           />
@@ -210,7 +226,9 @@ function EditCollection() {
           />
         </div>
         <div className="w-[100%] md:w-[40%] flex justify-center items-center ">
-          <Button>Submit Post</Button>
+          <Button disabled={isSubmitting}>
+            {isSubmitting ? "Updating" : "Updated"}
+          </Button>
         </div>
       </div>
     </form>

@@ -1,11 +1,12 @@
 import { useState } from "react";
 
 import { toast } from "react-toastify";
-import Button from "../components/Button";
-import { usePostCollectionMutation } from "../components/feature/apiFeatures/apiSlice";
+import Button from "../../components/userComponents/Button";
+import { usePostCollectionMutation } from "../../components/feature/apiFeatures/apiSlice";
 
 function CreateCollection() {
-  const [addPost] = usePostCollectionMutation();
+  const [addPost, { isLoading }] =
+    usePostCollectionMutation();
   const [postData, setPostData] = useState({
     category: "",
     name: "",
@@ -58,7 +59,7 @@ function CreateCollection() {
       });
     } catch (err) {
       if (err) {
-        console.log(err);
+        console.log(err.data.message);
         toast.error(err.data.message, {
           className: "w-[500px] text-red-500",
         });
@@ -190,7 +191,9 @@ function CreateCollection() {
           />
         </div>
         <div className="w-[100%] md:w-[40%] flex justify-center items-center ">
-          <Button>Submit Post</Button>
+          <Button disabled={isLoading}>
+            {isLoading ? "submitting..." : "Submit"}
+          </Button>
         </div>
       </div>
     </form>

@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { addToCart } from "../components/feature/cartSlice";
+import { addToCart } from "../../components/feature/cartSlice";
 import { useEffect, useState } from "react";
 import {
   NavLink,
@@ -7,9 +7,9 @@ import {
   useOutletContext,
   useParams,
 } from "react-router-dom";
-import { useGetCollectionQuery } from "../components/feature/apiFeatures/apiSlice";
+import { useGetCollectionQuery } from "../../components/feature/apiFeatures/apiSlice";
 import { useDispatch, useSelector } from "react-redux";
-import Spinner from "../components/Spinner";
+import Spinner from "../../components/userComponents/Spinner";
 import { motion } from "framer-motion";
 
 function ViewProduct() {
@@ -148,7 +148,7 @@ function ViewProduct() {
                     })
                   )
                 }
-                className="w-full bg-gradient-to-r from-yellow-400/60 to-yellow-800/80 text-gray-50 shadow-xl active:scale-95 py-2 rounded-lg text-sm font-bold"
+                className="w-full bg-gradient-to-tr from-yellow-500/90 to-yellow-800/90 text-gray-50 shadow-xl active:scale-95 py-1 rounded-full text-sm font-semibold"
               >
                 ADD TO CART
               </button>

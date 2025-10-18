@@ -1,5 +1,4 @@
-import { useState } from "react";
-import logo from "./../assets/logo1.jpg";
+import logo from "./../../assets/logo1.jpg";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { HashLink } from "react-router-hash-link";
 

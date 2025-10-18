@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useGetMeQuery } from "./feature/apiFeatures/apiSlice";
+import { useGetMeQuery } from "./../feature/apiFeatures/apiSlice";
 import Spinner from "./Spinner";
 
 function ProtectMe() {

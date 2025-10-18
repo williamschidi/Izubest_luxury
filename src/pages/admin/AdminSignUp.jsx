@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Button from "../components/Button";
-import { useAdminSignupMutation } from "../components/feature/apiFeatures/apiSlice";
+import Button from "../../components/userComponents/Button";
+import { useAdminSignupMutation } from "../../components/feature/apiFeatures/apiSlice";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 function AdminSignup() {

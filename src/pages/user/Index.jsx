@@ -1,15 +1,15 @@
 import { lazy, Suspense, useEffect } from "react";
-import Hero from "../components/Hero";
-import About from "../components/About";
+import Hero from "../../components/userComponents/Hero";
+import About from "../../components/userComponents/About";
 
-import Latest1 from "../components/Latest1";
-import Testimonial from "../components/Testimonial";
-import Footer from "../components/Footer";
-import Collection from "../components/Collection";
+import Latest1 from "../../components/userComponents/Latest1";
+import Testimonial from "../../components/userComponents/Testimonial";
+import Footer from "../../components/userComponents/Footer";
+import Collection from "../../components/userComponents/Collection";
 import { useOutletContext } from "react-router-dom";
 
 const Location = lazy(() =>
-  import("../components/Location")
+  import("../../components/userComponents/Location")
 );
 function Index() {
   const { collections } = useOutletContext();

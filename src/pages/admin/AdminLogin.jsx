@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
-import Button from "../components/Button";
+import Button from "../../components/userComponents/Button";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useAdminLoginMutation } from "../components/feature/apiFeatures/apiSlice";
+import { useAdminLoginMutation } from "../../components/feature/apiFeatures/apiSlice";
 
 function AdminLogin() {
   const [showPassword, setShowPassword] = useState(false);

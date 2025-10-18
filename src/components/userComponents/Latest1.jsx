@@ -1,4 +1,4 @@
-import { useGetLatestQuery } from "./feature/apiFeatures/apiSlice";
+import { useGetLatestQuery } from "./../feature/apiFeatures/apiSlice";
 
 function Latest1() {
   const { data } = useGetLatestQuery();

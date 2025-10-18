@@ -1,23 +1,23 @@
-import Index from "./pages/Index";
+import Index from "./pages/user/Index";
 import {
   Routes,
   Route,
   useLocation,
 } from "react-router-dom";
-import AdminLogin from "./pages/AdminLogin";
-import AdminIndex from "./pages/AdminIndex";
-import AdminSignup from "./pages/AdminSignUp";
-import AdminDashboard from "./pages/AdminDashboard";
-import ViewProduct from "./pages/ViewProduct";
-import Layout from "./pages/Layout";
-import Cart from "./pages/Cart";
-import CreateCollection from "./pages/CreateCollection";
-import CreateLatest from "./pages/CreateLatest";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminIndex from "./pages/admin/AdminIndex";
+import AdminSignup from "./pages/admin/AdminSignUp";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import ViewProduct from "./pages/user/ViewProduct";
+import Layout from "./pages/user/Layout";
+import Cart from "./pages/user/Cart";
+import CreateCollection from "./pages/admin/CreateCollection";
+import CreateLatest from "./pages/admin/CreateLatest";
 import { ToastContainer } from "react-toastify";
-import EditCollection from "./pages/EditCollection";
-import GetCollections from "./pages/GetCollections";
-import EditLatest from "./pages/EditLatest";
-import ProtectMe from "./components/ProtectMe";
+import EditCollection from "./pages/admin/EditCollection";
+import GetCollections from "./pages/admin/GetCollections";
+import EditLatest from "./pages/admin/EditLatest";
+import ProtectMe from "./components/userComponents/ProtectMe";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import AOS from "aos";

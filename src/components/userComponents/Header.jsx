@@ -5,7 +5,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo from "./../assets/logo1.jpg";
+import logo from "./../../assets/logo1.jpg";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
@@ -320,7 +320,7 @@ function Header({ data }) {
                     name="search"
                     onChange={handleOnChange}
                     onKeyDown={handlekeyDown}
-                    className="rounded-full pl-10  border border-gray-500 outline-none focus:ring  focus:ring-yellow-700 text-gray-700"
+                    className="rounded-full pl-10  border border-yellow-600 outline-none focus:ring  focus:ring-yellow-700 text-gray-600"
                     list="wear"
                   />
                   <datalist

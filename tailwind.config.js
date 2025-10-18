@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         poppins: ["Raleway", "Poppins", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
-        calligraphy: ["Great Vibes", "Cursive"],
+        calligraphy: ["Cursive"],
       },
       screens: {
         mlg: "900px",

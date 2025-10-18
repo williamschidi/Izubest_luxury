@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import logo from "./../assets/logo1.jpg";
+import logo from "./../../assets/logo1.jpg";
 import { useState } from "react";
-import { useGetMeQuery } from "./feature/apiFeatures/apiSlice";
+import { useGetMeQuery } from "./../feature/apiFeatures/apiSlice";
 import { useLocation } from "react-router-dom";
 import AdminMobileNav from "./AdminMobileNav";
 
