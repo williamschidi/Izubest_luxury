@@ -11,10 +11,10 @@ function Hero() {
       <div className="absolute bg-gradient-to-tr from-yellow-800/10 to-yellow-500/10 inset-0 z-0"></div>
       <div className="w-full mlg:w-[60%] h-full bg-yellow-700/20 mlg:bg-yellow-700/50 mlg:[clip-path:circle(70%_at_0%_50%)] lg:[clip-path:circle(80%_at_0%_50%)] ">
         <div className="z-10 max-w-full mlg:max-w-[28rem] pb-16 mlg:pb-0 flex flex-col justify-end mlg:justify-center items-center mlg:items-start  h-full px-2 xs:px-4 sm:px-6 md:px-8 text-white">
-          <h1 className="text-3xl md:text-4xl  font-bold mb-2 md:mb-4 text-white  font-calligraphy tracking-tighter">
+          <h1 className="text-3xl md:text-4xl  font-bold mb-2 md:mb-4 text-white  font-calligraphy tracking-tighter drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
             Elevate Your Style
           </h1>
-          <p className="text-sm md:text-lg max-w-[24rem] text-center md:text-left mlg:max-w-full mb-4 md:mb-6 text-white font-medium md:font-medium font-poppins px-2 tracking-tight">
+          <p className="text-sm md:text-lg max-w-[24rem] text-center md:text-left mlg:max-w-full mb-4 md:mb-6 text-white font-medium md:font-semibold font-poppins px-2 tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
             Discover unique, modern, and culturally inspired
             designs tailored for you.
           </p>
