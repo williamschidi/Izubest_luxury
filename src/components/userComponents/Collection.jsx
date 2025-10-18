@@ -72,7 +72,7 @@ function Collection({ collection }) {
       </div>
       {data?.numPage > 1 && (
         <div className="w-full flex justify-center items-center py-8">
-          <div className="flex items-center space-x-6 rounded-full py-2 px-2 bg-gradient-to-tr from-gray-100 to-gray-200">
+          <div className="flex items-center space-x-6 rounded-full py-2 px-2 ">
             <button
               onClick={() =>
                 setPage((prev) => Math.max(prev - 1, 1))
